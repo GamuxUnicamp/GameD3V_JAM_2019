@@ -34,5 +34,6 @@ func _process(delta):
 		if Input.is_action_just_pressed("ui_up") and can_double_jump:
 			linear_velocity.y = -JUMPSPEED
 			can_double_jump = false
-	move_and_slide_with_snap(linear_velocity, snap_vector, floor_normal)
+	var guarda = move_and_slide_with_snap(linear_velocity, snap_vector, floor_normal)
+	print(guarda)
 #	pass
