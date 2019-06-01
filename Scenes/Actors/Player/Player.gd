@@ -5,7 +5,7 @@ extends KinematicBody2D
 # var b = "text"
 export(int) var WALKSPEED = 200
 export(int) var JUMPSPEED = 200
-export(int) var GRAVITY = 300
+export(int) var GRAVITY = 250
 
 var snap_vector = Vector2(0,1)
 var floor_normal = Vector2(0,-1)
