@@ -25,6 +25,14 @@ func _process(delta):
 		linear_velocity.x -= WALKSPEED
 	if Input.is_action_pressed("ui_right"):
 		linear_velocity.x += WALKSPEED
+	if linear_velocity.x > 0:
+		$Sprite.flip_v = false
+		$Weapon.scale.x = 1
+	elif linear_velocity.x < 0:
+		$Sprite.flip_v = true
+		$Weapon.scale.x = -1
+	if Input.is_action_just_pressed("ui_j"):
+		$Weapon.attack()
 	if is_on_floor():
 		can_double_jump = true
 		linear_velocity.y = 0
