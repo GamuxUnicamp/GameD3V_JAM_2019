@@ -20,13 +20,13 @@ config/icon="res://icon.png"
 
 [autoload]
 
-global="*res://Global/global.gd"
+global="*res://Scripts/global.gd"
 
 [display]
 
 window/size/height=576
+window/size/resizable=false
 window/size/fullscreen=true
-window/vsync/use_vsync=false
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 

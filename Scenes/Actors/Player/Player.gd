@@ -35,5 +35,5 @@ func _process(delta):
 			linear_velocity.y = -JUMPSPEED
 			can_double_jump = false
 	var guarda = move_and_slide_with_snap(linear_velocity, snap_vector, floor_normal)
-	print(guarda)
+	#print(guarda)
 #	pass
