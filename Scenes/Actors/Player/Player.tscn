@@ -24,3 +24,6 @@ drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 
 [node name="Weapon" parent="." instance=ExtResource( 3 )]
+
+[node name="StunTimer" type="Timer" parent="."]
+one_shot = true
