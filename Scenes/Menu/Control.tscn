@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://imagens/title_sample.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Menu/buttons/NewGameButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Menu/buttons/ContinueButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Menu/buttons/OptionsButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://imagens/icon.png" type="Texture" id=5]
+[ext_resource path="res://imagens/background_1.jpg" type="Texture" id=6]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1.0
+margin_bottom = -3.0
+
+[node name="menu" type="VBoxContainer" parent="."]
+margin_left = 120.0
+margin_top = 36.0
+margin_right = 920.0
+margin_bottom = 500.0
+
+[node name="TextureRect" type="TextureRect" parent="menu"]
+margin_right = 800.0
+margin_bottom = 150.0
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[node name="center row" type="HBoxContainer" parent="menu"]
+margin_top = 154.0
+margin_right = 800.0
+margin_bottom = 464.0
+size_flags_vertical = 3
+alignment = 1
+
+[node name="botoes" type="VBoxContainer" parent="menu/center row"]
+margin_right = 398.0
+margin_bottom = 310.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="NewGameButton" parent="menu/center row/botoes" instance=ExtResource( 2 )]
+margin_top = 61.0
+margin_right = 398.0
+margin_bottom = 121.0
+align = 0
+
+[node name="ContinueButton" parent="menu/center row/botoes" instance=ExtResource( 3 )]
+margin_top = 125.0
+margin_right = 398.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 360, 60 )
+
+[node name="OptionsButton" parent="menu/center row/botoes" instance=ExtResource( 4 )]
+margin_top = 189.0
+margin_right = 398.0
+margin_bottom = 249.0
+rect_min_size = Vector2( 360, 60 )
+
+[node name="CenterContainer" type="CenterContainer" parent="menu/center row"]
+margin_left = 402.0
+margin_right = 800.0
+margin_bottom = 310.0
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="menu/center row/CenterContainer"]
+margin_left = 167.0
+margin_top = 123.0
+margin_right = 231.0
+margin_bottom = 187.0
+texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 519.172, 286.654 )
+scale = Vector2( 0.753045, 0.746036 )
+texture = ExtResource( 6 )
