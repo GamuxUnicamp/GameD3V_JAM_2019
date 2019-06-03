@@ -65,6 +65,6 @@ align = 2
 
 [node name="Sprite" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( 516.533, 286.654 )
-scale = Vector2( 0.756909, 0.746036 )
+position = Vector2( 691.819, 383.473 )
+scale = Vector2( 1.05835, 1.04991 )
 texture = ExtResource( 5 )

@@ -10,8 +10,11 @@
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 1.0
-margin_bottom = -3.0
+margin_left = -13.2783
+margin_top = -17.7042
+margin_right = -12.2783
+margin_bottom = -20.7042
+rect_scale = Vector2( 1.34943, 1.40747 )
 
 [node name="menu" type="VBoxContainer" parent="."]
 margin_left = 120.0
