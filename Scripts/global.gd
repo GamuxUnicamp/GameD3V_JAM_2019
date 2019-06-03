@@ -1,5 +1,7 @@
 extends Node
 
+var health
+var artifacts
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
