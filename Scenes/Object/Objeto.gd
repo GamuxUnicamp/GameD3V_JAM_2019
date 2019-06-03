@@ -7,9 +7,10 @@ var player_in = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Area2D.connect("body_entered",self,"entrou")
-	$Area2D.connect("body_exited",self,"saiu")
-	set_process(true)
+	add_to_group("Quebravel")
+	#$Area2D.connect("body_entered",self,"entrou")
+	#$Area2D.connect("body_exited",self,"saiu")
+	#set_process(true)
 	pass # Replace with function body.
 func _process(delta):
 	if Input.is_action_pressed("action1"):

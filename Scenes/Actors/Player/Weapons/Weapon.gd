@@ -27,13 +27,19 @@ func _ready():
 	
 func bateu(body):
 	if atacando:
+		checar_se_bateu([body])
+
+func reloaded():
+	can_attack = true
+
+func checar_se_bateu(lista):
+	for body in lista:
+		if body.is_in_group("Quebravel"):
+			body.quebrou()
 		if body.is_in_group(enemy):
 			if body.has_method("damage"):
 				body.damage(weapon_damage)
 			print("Bateu")
-
-func reloaded():
-	can_attack = true
 
 func attack_ended():
 	hide()
@@ -42,19 +48,10 @@ func attack_ended():
 
 func attack():
 	if can_attack:
-		print(get_overlapping_areas())
-		print(get_overlapping_bodies())
 		
-		for body in get_overlapping_areas():
-			if body.is_in_group(enemy):
-				if body.has_method("damage"):
-					body.damage(weapon_damage)
-				print("Bateu")
-		for body in get_overlapping_bodies():
-			if body.is_in_group(enemy):
-				if body.has_method("damage"):
-					body.damage(weapon_damage)
-				print("Bateu")
+		checar_se_bateu(get_overlapping_areas())
+		checar_se_bateu(get_overlapping_bodies())
+		
 		show()
 		atacando = true
 		$Duration.start()

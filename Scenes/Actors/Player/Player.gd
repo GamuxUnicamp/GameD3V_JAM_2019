@@ -42,7 +42,7 @@ func damage(val, knockback = false, direcao = Vector2(0,0), tempo = 0):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if HP <= 0:
-		queue_free()
+		get_tree().change_scene("res://Scenes/Temp/LevelTest2.tscn")
 	emit_signal("paradas_pra_ui",{"max_life":MAXHITPOINTS,"life":HP})
 	linear_velocity.y += GRAVITY*delta
 	if sob_controle:
@@ -53,11 +53,11 @@ func _process(delta):
 			linear_velocity.x += WALKSPEED
 		if linear_velocity.x > 0:
 			facing_right = true
-			$Sprite.flip_v = false
+			$Sprite.flip_h = false
 			$Weapon.scale.x = 1
 		elif linear_velocity.x < 0:
 			facing_right = false
-			$Sprite.flip_v = true
+			$Sprite.flip_h = true
 			$Weapon.scale.x = -1
 		if Input.is_action_just_pressed("ui_j"):
 			$Weapon.attack()
