@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Actors/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Placeholders/cavaleiro2.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Actors/Player/Weapons/Weapon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Actors/Player/Weapons/Gun.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 25.0988
@@ -23,8 +24,13 @@ current = true
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 
-[node name="Weapon" parent="." instance=ExtResource( 3 )]
+[node name="Weapon" parent="." groups=[
+"Ignore",
+] instance=ExtResource( 3 )]
 position = Vector2( 1.52588e-05, 7.3151 )
+
+[node name="Gun" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0, -13.167 )
 
 [node name="StunTimer" type="Timer" parent="."]
 one_shot = true
