@@ -11,6 +11,7 @@ func _ready():
 func quebrou():
 	#mostra animaçao
 	get_parent().modulate.a = 0.5
+	get_parent().add_to_group("Ignore")
 	queue_free()
 
 	pass

@@ -55,12 +55,16 @@ func _process(delta):
 			facing_right = true
 			$Sprite.flip_h = false
 			$Weapon.scale.x = 1
+			$Gun.scale.x = 1
 		elif linear_velocity.x < 0:
 			facing_right = false
 			$Sprite.flip_h = true
 			$Weapon.scale.x = -1
-		if Input.is_action_just_pressed("ui_j"):
+			$Gun.scale.x = -1
+		if Input.is_action_pressed("ui_j"):
 			$Weapon.attack()
+		if Input.is_action_pressed("ui_k"):
+			$Gun.attack()
 		if is_on_floor():
 			can_double_jump = true
 			linear_velocity.y = 0

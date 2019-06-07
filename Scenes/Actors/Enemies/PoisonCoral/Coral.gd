@@ -17,6 +17,7 @@ func voltei():
 	monitoring = true
 	monitorable = true
 	$CollisionShape2D.disabled = false
+	remove_from_group("Ignore")
 
 func damage(val, knockback = false, direcao = Vector2(0,0), tempo = 0):
 	print("Coral: Tomei "+str(val)+" de dano")
@@ -24,6 +25,8 @@ func damage(val, knockback = false, direcao = Vector2(0,0), tempo = 0):
 	$RegrowTimer.start()
 	$CollisionShape2D.disabled = true
 	monitoring = false
+	monitorable = false
+	add_to_group("Ignore")
 
 func jogador_entrou(body):
 	if body.is_in_group("Player"):
