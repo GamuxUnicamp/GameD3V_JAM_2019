@@ -6,6 +6,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	for peixe in $Peixes.get_children():
+		peixe.alvo = $Player
 	$Player.connect("paradas_pra_ui",self,"ui_update")
 	pass # Replace with function body.
 
