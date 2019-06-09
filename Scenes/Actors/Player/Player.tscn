@@ -11,6 +11,8 @@ height = 63.4089
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
+WALKSPEED = 225
+JUMPSPEED = 220
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 1.333, 1.333 )
@@ -20,7 +22,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2( 0, -96 )
+offset = Vector2( 0, -128 )
 current = true
 drag_margin_h_enabled = false
 smoothing_enabled = true

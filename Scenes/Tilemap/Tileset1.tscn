@@ -6,22 +6,22 @@
 extents = Vector2( 32, 32 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 64, 32 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 32, 32 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 32, 64 )
-
-[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 64, 64 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 32, 64 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 64, 32 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 32, 64 )
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 32, 32 )
@@ -33,43 +33,15 @@ extents = Vector2( 32, 32 )
 extents = Vector2( 64, 32 )
 
 [sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 32, 32 )
-
-[sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 32, 32 )
-
-[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 64, 32 )
 
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 64, 32 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 32, 32 )
+
 [node name="Tileset1" type="Node"]
-
-[node name="0" type="Sprite" parent="."]
-editor/display_folded = true
-texture = ExtResource( 1 )
-centered = false
-vframes = 3
-hframes = 5
-
-[node name="StaticBody2D" type="StaticBody2D" parent="0"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="0/StaticBody2D"]
-position = Vector2( 96, 96 )
-shape = SubResource( 1 )
-
-[node name="1" type="Sprite" parent="."]
-editor/display_folded = true
-position = Vector2( 128, 0 )
-texture = ExtResource( 1 )
-centered = false
-vframes = 3
-hframes = 5
-frame = 1
-
-[node name="StaticBody2D" type="StaticBody2D" parent="1"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="1/StaticBody2D"]
-position = Vector2( 64, 96 )
-shape = SubResource( 2 )
 
 [node name="2" type="Sprite" parent="."]
 editor/display_folded = true
@@ -84,22 +56,7 @@ frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="2/StaticBody2D"]
 position = Vector2( 32, 96 )
-shape = SubResource( 3 )
-
-[node name="3" type="Sprite" parent="."]
-editor/display_folded = true
-position = Vector2( 0, 128 )
-texture = ExtResource( 1 )
-centered = false
-vframes = 3
-hframes = 5
-frame = 5
-
-[node name="StaticBody2D" type="StaticBody2D" parent="3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="3/StaticBody2D"]
-position = Vector2( 96, 64 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="4" type="Sprite" parent="."]
 editor/display_folded = true
@@ -114,7 +71,7 @@ frame = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="4/StaticBody2D"]
 position = Vector2( 64, 64 )
-shape = SubResource( 5 )
+shape = SubResource( 2 )
 
 [node name="5" type="Sprite" parent="."]
 editor/display_folded = true
@@ -129,7 +86,20 @@ frame = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="5/StaticBody2D"]
 position = Vector2( 32, 64 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
+
+[node name="0" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+vframes = 3
+hframes = 5
+
+[node name="StaticBody2D" type="StaticBody2D" parent="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/StaticBody2D"]
+position = Vector2( 96, 96 )
+shape = SubResource( 4 )
 
 [node name="6" type="Sprite" parent="."]
 editor/display_folded = true
@@ -144,11 +114,26 @@ frame = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="6/StaticBody2D"]
 position = Vector2( 64, 32 )
-shape = SubResource( 7 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="6/StaticBody2D"]
 position = Vector2( 32, 96 )
-shape = SubResource( 8 )
+shape = SubResource( 6 )
+
+[node name="3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 0, 128 )
+texture = ExtResource( 1 )
+centered = false
+vframes = 3
+hframes = 5
+frame = 5
+
+[node name="StaticBody2D" type="StaticBody2D" parent="3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="3/StaticBody2D"]
+position = Vector2( 96, 64 )
+shape = SubResource( 7 )
 
 [node name="7" type="Sprite" parent="."]
 editor/display_folded = true
@@ -163,11 +148,11 @@ frame = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="7/StaticBody2D"]
 position = Vector2( 64, 32 )
-shape = SubResource( 7 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="7/StaticBody2D"]
 position = Vector2( 96, 96 )
-shape = SubResource( 8 )
+shape = SubResource( 6 )
 
 [node name="8" type="Sprite" parent="."]
 editor/display_folded = true
@@ -183,7 +168,41 @@ editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="8/StaticBody2D"]
 position = Vector2( 96, 32 )
+shape = SubResource( 8 )
+
+[node name="12" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 512, 256 )
+texture = ExtResource( 1 )
+centered = false
+vframes = 3
+hframes = 5
+frame = 14
+
+[node name="StaticBody2D" type="StaticBody2D" parent="12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="12/StaticBody2D"]
+position = Vector2( 96, 32 )
 shape = SubResource( 9 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="12/StaticBody2D"]
+position = Vector2( 64, 96 )
+shape = SubResource( 10 )
+
+[node name="1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 128, 0 )
+texture = ExtResource( 1 )
+centered = false
+vframes = 3
+hframes = 5
+frame = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1/StaticBody2D"]
+position = Vector2( 64, 96 )
+shape = SubResource( 11 )
 
 [node name="9" type="Sprite" parent="."]
 editor/display_folded = true
@@ -198,7 +217,7 @@ frame = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="9/StaticBody2D"]
 position = Vector2( 64, 32 )
-shape = SubResource( 10 )
+shape = SubResource( 12 )
 
 [node name="10" type="Sprite" parent="."]
 editor/display_folded = true
@@ -213,9 +232,10 @@ frame = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="10/StaticBody2D"]
 position = Vector2( 32, 32 )
-shape = SubResource( 11 )
+shape = SubResource( 13 )
 
 [node name="11" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 384, 256 )
 texture = ExtResource( 1 )
 centered = false
@@ -228,26 +248,8 @@ editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="11/StaticBody2D"]
 position = Vector2( 32, 32 )
-shape = SubResource( 12 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="11/StaticBody2D"]
 position = Vector2( 64, 96 )
-shape = SubResource( 13 )
-
-[node name="12" type="Sprite" parent="."]
-position = Vector2( 512, 256 )
-texture = ExtResource( 1 )
-centered = false
-vframes = 3
-hframes = 5
-frame = 14
-
-[node name="StaticBody2D" type="StaticBody2D" parent="12"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="12/StaticBody2D"]
-position = Vector2( 96, 32 )
-shape = SubResource( 12 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="12/StaticBody2D"]
-position = Vector2( 64, 96 )
-shape = SubResource( 13 )
+shape = SubResource( 10 )
