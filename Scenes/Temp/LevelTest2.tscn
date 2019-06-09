@@ -17,6 +17,7 @@ extents = Vector2( 32.3284, 32.4522 )
 script = ExtResource( 1 )
 
 [node name="Floor" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 530.507, 531.116 )
 
 [node name="Sprite" type="Sprite" parent="Floor"]
@@ -27,6 +28,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor2" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1463.65, 455.428 )
 
 [node name="Sprite" type="Sprite" parent="Floor2"]
@@ -37,6 +39,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor6" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1989.89, 489.748 )
 rotation = -1.57914
 
@@ -48,6 +51,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor7" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1835.45, -402.575 )
 rotation = -1.95562
 
@@ -59,6 +63,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor8" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1262.24, -1052.21 )
 rotation = -2.70635
 
@@ -70,6 +75,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor9" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 373.022, -1257.42 )
 rotation = -3.12604
 
@@ -81,6 +87,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor10" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( -475.157, -1052.21 )
 rotation = -3.66981
 
@@ -92,6 +99,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor11" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( -1049.73, -395.556 )
 rotation = -4.27768
 
@@ -103,6 +111,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor12" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( -1186.53, 507.345 )
 rotation = -4.87929
 
@@ -114,6 +123,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor13" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( -858.206, 521.025 )
 rotation = -6.24004
 
@@ -125,6 +135,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor14" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( -146.83, 548.386 )
 rotation = -6.24004
 
@@ -136,6 +147,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor15" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 265.139, 269.516 )
 rotation = -6.28794
 
@@ -147,6 +159,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor16" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 800.775, 17.5591 )
 rotation = -6.28794
 
@@ -158,6 +171,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor17" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 236.54, -193.747 )
 rotation = -6.28794
 
@@ -169,6 +183,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor18" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 655.002, -389.599 )
 rotation = -6.28794
 
@@ -180,6 +195,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor3" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 2047.82, 319.43 )
 
 [node name="Sprite" type="Sprite" parent="Floor3"]
@@ -190,6 +206,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor4" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 2264.18, 164.887 )
 
 [node name="Sprite" type="Sprite" parent="Floor4"]
@@ -200,6 +217,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Floor5" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 2390.91, 28.8888 )
 
 [node name="Sprite" type="Sprite" parent="Floor5"]
@@ -212,6 +230,7 @@ shape = SubResource( 1 )
 [node name="RigidBody2D" type="RigidBody2D" parent="." groups=[
 "Enemy",
 ]]
+editor/display_folded = true
 position = Vector2( 800.373, 357.89 )
 
 [node name="Sprite" type="Sprite" parent="RigidBody2D"]
@@ -224,10 +243,11 @@ shape = SubResource( 2 )
 position = Vector2( 520.39, 468.672 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 260.19, 386.95 )
+position = Vector2( -519.328, -926.292 )
 MAXHITPOINTS = 20
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
 margin_left = 214.838
@@ -244,6 +264,7 @@ rect_scale = Vector2( 6.39, 3.37747 )
 text = "Super mega blaster UI"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground"]
 texture = ExtResource( 5 )

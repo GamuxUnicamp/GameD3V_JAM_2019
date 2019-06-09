@@ -9,8 +9,10 @@ export(int) var WALKSPEED = 200
 export(int) var JUMPSPEED = 250
 export(int) var GRAVITY = 250
 export(int) var MAXHITPOINTS = 200 
+export(int) var TERMINALVELOCITY = 600
 
-var snap_vector = Vector2(0,0.1)
+var jumping = false
+var snap_vector = Vector2(0,0.5)
 var floor_normal = Vector2(0,-1)
 var linear_velocity = Vector2(0,0)
 
@@ -47,6 +49,8 @@ func _process(delta):
 		get_tree().change_scene("res://Scenes/Temp/LevelTest2.tscn")
 	emit_signal("paradas_pra_ui",{"max_life":MAXHITPOINTS,"life":HP})
 	linear_velocity.y += GRAVITY*delta
+	if linear_velocity.y > TERMINALVELOCITY:
+		linear_velocity.y = TERMINALVELOCITY
 	if sob_controle:
 		linear_velocity.x = 0
 		if Input.is_action_pressed("ui_left"):
@@ -69,15 +73,22 @@ func _process(delta):
 			$Gun.attack()
 		if is_on_ceiling() and linear_velocity.y < 0:
 			linear_velocity.y = 0
-		if is_on_floor():
+		if is_on_floor() and not jumping:
 			can_double_jump = true
-			linear_velocity.y = 0
+			if linear_velocity.y > 0:
+				linear_velocity.y = 0
 			if Input.is_action_just_pressed("ui_up"):
 				linear_velocity.y = -JUMPSPEED
+				jumping = true
+				yield(get_tree().create_timer(0.5),"timeout")
+				jumping = false
 		else:
 			if Input.is_action_just_pressed("ui_up") and can_double_jump:
 				linear_velocity.y = -JUMPSPEED
 				can_double_jump = false
-	var guarda = move_and_slide_with_snap(linear_velocity, snap_vector, floor_normal)
+	if not jumping:
+		move_and_slide_with_snap(linear_velocity, snap_vector, floor_normal)
+	else:
+		move_and_slide(linear_velocity, floor_normal)
 	#print(guarda)
 #	pass
