@@ -7,6 +7,8 @@
 radius = 31.1314
 
 [node name="Pot" type="Sprite"]
+z_index = 1
+z_as_relative = false
 texture = ExtResource( 1 )
 
 [node name="Objeto" type="StaticBody2D" parent="."]

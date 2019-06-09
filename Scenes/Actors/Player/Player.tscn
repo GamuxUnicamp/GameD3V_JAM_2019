@@ -12,7 +12,7 @@ height = 63.4089
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 WALKSPEED = 225
-JUMPSPEED = 240
+JUMPSPEED = 230
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 1.333, 1.333 )
