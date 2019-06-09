@@ -36,10 +36,10 @@ func reloaded():
 
 func checar_se_bateu(lista):
 	for body in lista:
-		if body.is_in_group("Quebravel"):
+		if body.is_in_group("Quebravel") and not body.is_in_group("Ignore"):
 			body.quebrou(get_parent())
 			print(get_parent().HP)
-		if body.is_in_group(enemy):
+		if body.is_in_group(enemy) and not body.is_in_group("Ignore"):
 			if body.has_method("damage_with_knockback"):
 				var knockback = (body.position-get_parent().position).normalized()*knockback_speed
 				body.damage_with_knockback(weapon_damage,true,knockback,knockback_duration)

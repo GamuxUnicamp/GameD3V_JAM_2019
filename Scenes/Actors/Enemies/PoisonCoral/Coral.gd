@@ -29,7 +29,7 @@ func damage(val, knockback = false, direcao = Vector2(0,0), tempo = 0):
 	add_to_group("Ignore")
 
 func jogador_entrou(body):
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") and not is_in_group("Ignore"):
 		if body.has_method("damage_with_knockback"):
 			var knockback = knockback_value*(Vector2(3,-1).normalized())
 			if body.facing_right:
