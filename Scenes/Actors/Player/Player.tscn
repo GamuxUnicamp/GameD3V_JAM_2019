@@ -11,6 +11,8 @@ height = 63.4089
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
+WALKSPEED = 225
+JUMPSPEED = 230
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 1.333, 1.333 )
@@ -20,14 +22,23 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2( 0, -128 )
 current = true
+limit_left = 0
+limit_top = 0
 drag_margin_h_enabled = false
-drag_margin_v_enabled = false
+smoothing_enabled = true
+smoothing_speed = 3.2
+drag_margin_left = 0.05
+drag_margin_top = 0.25
+drag_margin_right = 0.05
+drag_margin_bottom = 0.0
+editor_draw_drag_margin = true
 
 [node name="Weapon" parent="." groups=[
 "Ignore",
 ] instance=ExtResource( 3 )]
-position = Vector2( 1.52588e-05, 7.3151 )
+position = Vector2( 1.52588e-005, 7.3151 )
 
 [node name="Gun" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, -13.167 )
