@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Tilemap/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Actors/Player/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Object/Objeto2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://batata.jpg" type="Texture" id=5]
 [ext_resource path="res://Scenes/Artifact/Artefato.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Animations/Fade1.tres" type="Animation" id=7]
 
 [node name="Level2" type="Node2D"]
 position = Vector2( 2048, 520 )
@@ -1317,10 +1318,9 @@ position = Vector2( 5808, 1440 )
 position = Vector2( 5920, 1376 )
 
 [node name="Background" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="Image" type="Sprite" parent="Background"]
-modulate = Color( 0.0823529, 0.0823529, 0.341176, 1 )
+modulate = Color( 0.0823529, 0.309804, 0.823529, 0.317647 )
 scale = Vector2( 2.88, 2.1 )
 texture = ExtResource( 5 )
 centered = false
@@ -1334,6 +1334,7 @@ texture = ExtResource( 5 )
 centered = false
 
 [node name="Art" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Artefato2" parent="Art" instance=ExtResource( 6 )]
 position = Vector2( 8032, 1760 )
@@ -1352,3 +1353,9 @@ position = Vector2( 3960, 1632 )
 
 [node name="Artefato" parent="Art" instance=ExtResource( 6 )]
 position = Vector2( 8128, 4448 )
+
+[node name="FX" type="AnimationPlayer" parent="."]
+anims/Fade = ExtResource( 7 )
+
+[node name="Water" type="CanvasModulate" parent="FX"]
+color = Color( 0.690196, 0.843137, 1, 1 )
