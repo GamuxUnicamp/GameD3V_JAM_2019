@@ -35,7 +35,8 @@ func reloaded():
 func checar_se_bateu(lista):
 	for body in lista:
 		if body.is_in_group("Quebravel"):
-			body.quebrou()
+			body.quebrou(get_parent())
+			print(get_parent().HP)
 		if body.is_in_group(enemy):
 			if body.has_method("damage"):
 				body.damage(weapon_damage)
