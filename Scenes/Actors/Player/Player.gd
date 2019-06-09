@@ -10,7 +10,7 @@ export(int) var JUMPSPEED = 200
 export(int) var GRAVITY = 250
 export(int) var MAXHITPOINTS = 200 
 
-var snap_vector = Vector2(0,1)
+var snap_vector = Vector2(0,0.1)
 var floor_normal = Vector2(0,-1)
 var linear_velocity = Vector2(0,0)
 
@@ -30,8 +30,10 @@ func _ready():
 
 func acabou_stun():
 	sob_controle = true
-
-func damage(val, knockback = false, direcao = Vector2(0,0), tempo = 0):
+func damage(val):
+	print("Tomei "+str(val)+" de dano")
+	HP -= val
+func damage_with_knockback(val, knockback = false, direcao = Vector2(0,0), tempo = 0):
 	print("Tomei "+str(val)+" de dano")
 	HP -= val
 	if knockback and sob_controle:
