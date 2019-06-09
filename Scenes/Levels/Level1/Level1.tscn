@@ -8,6 +8,7 @@
 [ext_resource path="res://Placeholders/background.png" type="Texture" id=6]
 
 [node name="Level1" type="Node2D"]
+position = Vector2( 0, 1152 )
 
 [node name="Plataforma" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -22,10 +23,15 @@ position = Vector2( 2048, 416 )
 position = Vector2( 24, -2392 )
 
 [node name="CoralGroup" type="Node2D" parent="Enemy"]
-editor/display_folded = true
 
 [node name="Coral18" parent="Enemy/CoralGroup" instance=ExtResource( 3 )]
 position = Vector2( 6088, 3256 )
+
+[node name="Coral79" parent="Enemy/CoralGroup" instance=ExtResource( 3 )]
+position = Vector2( 5896, 3128 )
+
+[node name="Coral80" parent="Enemy/CoralGroup" instance=ExtResource( 3 )]
+position = Vector2( 5960, 3128 )
 
 [node name="Coral38" parent="Enemy/CoralGroup" instance=ExtResource( 3 )]
 position = Vector2( 7368, 3512 )
@@ -267,6 +273,7 @@ position = Vector2( 4485.78, 2872 )
 position = Vector2( 4485.78, 2937.48 )
 
 [node name="Potes" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Objeto" parent="Potes" instance=ExtResource( 4 )]
 position = Vector2( 8456, 2720 )
