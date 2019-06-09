@@ -6,7 +6,7 @@ extends KinematicBody2D
 signal paradas_pra_ui(coisas)
 
 export(int) var WALKSPEED = 200
-export(int) var JUMPSPEED = 200
+export(int) var JUMPSPEED = 250
 export(int) var GRAVITY = 250
 export(int) var MAXHITPOINTS = 200 
 
@@ -67,6 +67,8 @@ func _process(delta):
 			$Weapon.attack()
 		if Input.is_action_pressed("ui_k"):
 			$Gun.attack()
+		if is_on_ceiling() and linear_velocity.y < 0:
+			linear_velocity.y = 0
 		if is_on_floor():
 			can_double_jump = true
 			linear_velocity.y = 0

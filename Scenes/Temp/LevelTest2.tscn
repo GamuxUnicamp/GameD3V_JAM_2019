@@ -135,6 +135,50 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor14"]
 shape = SubResource( 1 )
 
+[node name="Floor15" type="StaticBody2D" parent="."]
+position = Vector2( 265.139, 269.516 )
+rotation = -6.28794
+
+[node name="Sprite" type="Sprite" parent="Floor15"]
+scale = Vector2( 15.7786, 1.17036 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor15"]
+shape = SubResource( 1 )
+
+[node name="Floor16" type="StaticBody2D" parent="."]
+position = Vector2( 800.775, 17.5591 )
+rotation = -6.28794
+
+[node name="Sprite" type="Sprite" parent="Floor16"]
+scale = Vector2( 15.7786, 1.17036 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor16"]
+shape = SubResource( 1 )
+
+[node name="Floor17" type="StaticBody2D" parent="."]
+position = Vector2( 236.54, -193.747 )
+rotation = -6.28794
+
+[node name="Sprite" type="Sprite" parent="Floor17"]
+scale = Vector2( 15.7786, 1.17036 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor17"]
+shape = SubResource( 1 )
+
+[node name="Floor18" type="StaticBody2D" parent="."]
+position = Vector2( 655.002, -389.599 )
+rotation = -6.28794
+
+[node name="Sprite" type="Sprite" parent="Floor18"]
+scale = Vector2( 15.7786, 1.17036 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor18"]
+shape = SubResource( 1 )
+
 [node name="Floor3" type="StaticBody2D" parent="."]
 position = Vector2( 2047.82, 319.43 )
 
