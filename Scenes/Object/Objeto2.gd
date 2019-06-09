@@ -10,7 +10,7 @@ func _ready():
 
 func quebrou():
 	#mostra animaçao
-	get_parent().modulate.a = 0.1
+	get_parent().self_modulate.a = 0.1
 	get_parent().add_to_group("Ignore")
 	queue_free()
 
