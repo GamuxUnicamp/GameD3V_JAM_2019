@@ -1,8 +1,8 @@
 extends Position2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
+
+
 var can_attack = true
 var bolha_scene = load("res://Scenes/Actors/Player/Weapons/BolhaAtaque.tscn")
 
@@ -35,6 +35,3 @@ func attack():
 		$Cooldown.start()
 		can_attack = false
 	pass
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

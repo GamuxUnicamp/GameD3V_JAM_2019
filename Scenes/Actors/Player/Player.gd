@@ -1,8 +1,5 @@
 extends KinematicBody2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 signal paradas_pra_ui(coisas)
 
 export(int) var WALKSPEED = 200
