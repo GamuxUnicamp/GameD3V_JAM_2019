@@ -28,3 +28,10 @@ shape = SubResource( 1 )
 position = Vector2( 19.367, 9.91899 )
 rotation = 0.0182238
 shape = SubResource( 2 )
+
+[node name="Deteccao" type="Area2D" parent="." groups=[
+"Ignore",
+]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Deteccao"]
+polygon = PoolVector2Array( -2.99965, 83.0005, 61.3376, 46.1938, 229.261, 309.336, 348.227, 186.765, 405.908, -0.697205, 355.438, -191.765, 265.311, -314.336, 61.3376, -62.1357, 0.208847, -90.7656, -69.4315, -54.3979, -68.9998, 43.0005 )
