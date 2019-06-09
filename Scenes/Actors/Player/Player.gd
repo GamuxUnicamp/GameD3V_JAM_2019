@@ -3,11 +3,11 @@ extends KinematicBody2D
 signal paradas_pra_ui(coisas)
 
 export(int) var WALKSPEED = 200
-export(int) var JUMPSPEED = 200
+export(int) var JUMPSPEED = 250
 export(int) var GRAVITY = 250
 export(int) var MAXHITPOINTS = 200 
 
-var snap_vector = Vector2(0,1)
+var snap_vector = Vector2(0,0.1)
 var floor_normal = Vector2(0,-1)
 var linear_velocity = Vector2(0,0)
 
@@ -27,8 +27,10 @@ func _ready():
 
 func acabou_stun():
 	sob_controle = true
-
-func damage(val, knockback = false, direcao = Vector2(0,0), tempo = 0):
+func damage(val):
+	print("Tomei "+str(val)+" de dano")
+	HP -= val
+func damage_with_knockback(val, knockback = false, direcao = Vector2(0,0), tempo = 0):
 	print("Tomei "+str(val)+" de dano")
 	HP -= val
 	if knockback and sob_controle:
@@ -62,6 +64,8 @@ func _process(delta):
 			$Weapon.attack()
 		if Input.is_action_pressed("ui_k"):
 			$Gun.attack()
+		if is_on_ceiling() and linear_velocity.y < 0:
+			linear_velocity.y = 0
 		if is_on_floor():
 			can_double_jump = true
 			linear_velocity.y = 0

@@ -29,12 +29,14 @@ func damage(val, knockback = false, direcao = Vector2(0,0), tempo = 0):
 	add_to_group("Ignore")
 
 func jogador_entrou(body):
-	if body.is_in_group("Player"):
-		print("AAA")
-		var knockback = knockback_value*(Vector2(3,-1).normalized())
-		if body.facing_right:
-			knockback.x*=-1
-		body.damage(damage,true,knockback,0.5)
+	if body.is_in_group("Player") and not is_in_group("Ignore"):
+		if body.has_method("damage_with_knockback"):
+			var knockback = knockback_value*(Vector2(3,-1).normalized())
+			if body.facing_right:
+				knockback.x*=-1
+			body.damage_with_knockback(damage,true,knockback,0.5)
+		elif body.has_method("damage"):
+			body.damage(damage)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
