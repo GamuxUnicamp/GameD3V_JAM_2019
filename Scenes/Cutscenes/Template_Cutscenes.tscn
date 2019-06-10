@@ -5,6 +5,7 @@
 
 [node name="Cutscene" type="Control"]
 script = ExtResource( 1 )
+PATH = "res://Scenes/Temp/LevelTest2.tscn"
 
 [node name="Control" type="Control" parent="."]
 margin_right = 1366.0
@@ -23,9 +24,10 @@ align = 1
 
 [node name="Digito" type="Timer" parent="."]
 wait_time = 0.1
-autostart = true
 
 [node name="Intervalo" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -35,3 +37,4 @@ scale = Vector2( 2.88, 2.12 )
 texture = ExtResource( 2 )
 centered = false
 flip_v = true
+[connection signal="timeout" from="Digito" to="." method="add_digit"]

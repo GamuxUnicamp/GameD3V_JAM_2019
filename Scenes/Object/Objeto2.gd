@@ -1,8 +1,8 @@
 extends StaticBody2D
 
 
-# Declare member variables here. Examples:
-# var a
+
+
 var coracao_cena = load("res://Scenes/Object/Heart/Heart.tscn")
 
 
