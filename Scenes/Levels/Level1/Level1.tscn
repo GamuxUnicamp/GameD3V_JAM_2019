@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Levels/Level1/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Tilemap/tileset1.tres" type="TileSet" id=2]
@@ -8,8 +8,9 @@
 [ext_resource path="res://Scenes/Artifact/Artefato.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Placeholders/background.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Animations/Fade1.tres" type="Animation" id=8]
+[ext_resource path="res://Scenes/UI/UI.tscn" type="PackedScene" id=9]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "fade_out"
 length = 3.6
 tracks/0/type = "value"
@@ -37,7 +38,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0.776471 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 232, 40 )
 
 [node name="Level1" type="Node2D"]
@@ -365,7 +366,7 @@ centered = false
 
 [node name="FX" type="AnimationPlayer" parent="."]
 anims/fade = ExtResource( 8 )
-anims/fade_out = SubResource( 2 )
+anims/fade_out = SubResource( 1 )
 
 [node name="Water" type="CanvasModulate" parent="FX"]
 color = Color( 0.690196, 0.843137, 1, 1 )
@@ -375,5 +376,7 @@ position = Vector2( 3016, 3208 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Border"]
 position = Vector2( 184, 304 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
+
+[node name="UI" parent="." instance=ExtResource( 9 )]
 [connection signal="body_entered" from="Level_Border" to="." method="change_level"]

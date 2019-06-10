@@ -41,8 +41,6 @@ func checar_se_bateu(lista):
 				body.damage_with_knockback(weapon_damage,true,knockback,knockback_duration)
 			elif body.has_method("damage"):
 				body.damage(weapon_damage)
-			
-			print("Bateu")
 
 func attack_ended():
 	hide()

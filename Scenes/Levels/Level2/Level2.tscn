@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Levels/Level2/Level2.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Tilemap/tileset1.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Artifact/Artefato.tscn" type="PackedScene" id=6]
 [ext_resource path="res://batata.jpg" type="Texture" id=7]
 [ext_resource path="res://Scenes/Animations/Fade1.tres" type="Animation" id=8]
+[ext_resource path="res://Scenes/UI/UI.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 192, 10 )
@@ -1372,4 +1373,6 @@ anims/fade = ExtResource( 8 )
 
 [node name="Water" type="CanvasModulate" parent="FX"]
 color = Color( 0.690196, 0.843137, 1, 1 )
+
+[node name="UI" parent="." instance=ExtResource( 9 )]
 [connection signal="body_entered" from="Level_Border" to="." method="change_level"]

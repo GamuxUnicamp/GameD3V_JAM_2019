@@ -7,7 +7,7 @@ var velocity = Vector2(1,0)
 export(String)var enemy = "Enemy"
 export(String)var ally = "Player"
 export(int)var damage = 15
-var duration = 5
+var duration = 1.5
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if connect("body_entered",self,"bateu") != 0:

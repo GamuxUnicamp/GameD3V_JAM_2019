@@ -3,7 +3,7 @@ extends Area2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export(int)var attack_damage = 10
+export(int)var attack_damage = 1
 export(int)var knockback_value = 300
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,18 +16,12 @@ func _ready():
 
 func voltei():
 	$Sprite.show()
-	monitoring = true
-	monitorable = true
-	$CollisionShape2D.disabled = false
 	remove_from_group("Ignore")
 
 func damage(val):
 	print("Coral: Tomei "+str(val)+" de dano")
 	$Sprite.hide()
 	$RegrowTimer.start()
-	$CollisionShape2D.disabled = true
-	monitoring = false
-	monitorable = false
 	add_to_group("Ignore")
 
 func jogador_entrou(body):
