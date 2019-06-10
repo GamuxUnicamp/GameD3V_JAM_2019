@@ -7,7 +7,7 @@ export(String)var enemy = "Enemy"
 export(float)var attack_cooldown = 0.3
 export(float)var attack_duration = 0.2
 export(int)var knockback_speed = 100
-export(float)var knockback_duration = 1.0
+export(float)var knockback_duration = 0.5
 export(int)var weapon_damage = 15
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,8 +34,7 @@ func reloaded():
 func checar_se_bateu(lista):
 	for body in lista:
 		if body.is_in_group("Quebravel") and not body.is_in_group("Ignore"):
-			body.quebrou(get_parent())
-			print(get_parent().HP)
+			body.quebrou()
 		if body.is_in_group(enemy) and not body.is_in_group("Ignore"):
 			if body.has_method("damage_with_knockback"):
 				var knockback = (body.position-get_parent().position).normalized()*knockback_speed

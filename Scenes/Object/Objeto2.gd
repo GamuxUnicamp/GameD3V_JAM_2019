@@ -3,24 +3,20 @@ extends StaticBody2D
 
 # Declare member variables here. Examples:
 # var a
+var coracao_cena = load("res://Scenes/Object/Heart/Heart.tscn")
 
-# Called when the node enters the scene tree for the first time.
-var heal = 0;
 
 func _ready():
 	add_to_group("Quebravel")
-	var random = RandomNumberGenerator.new()
-	random.randomize()
-	heal = random.randi_range(1,3)
 
 
-func quebrou(Player):
+func quebrou():
 	#mostra animaçao
-	Player.HP += heal
-	if Player.HP > 5:
-		Player.HP = 5
 	get_parent().modulate.a = 0.5
-	get_parent().add_to_group("Ignore")
+	if get_parent().tem_coracao:
+		var coracao = coracao_cena.instance()
+		coracao.position = get_parent().position
+		get_parent().get_parent().add_child(coracao)
 	queue_free()
 
 	pass

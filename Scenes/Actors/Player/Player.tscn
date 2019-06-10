@@ -22,11 +22,13 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, 79.8632 )
 offset = Vector2( 0, -128 )
 current = true
-limit_left = 0
-limit_top = 0
+limit_left = -100000
+limit_top = -10000
 drag_margin_h_enabled = false
+drag_margin_v_enabled = false
 smoothing_enabled = true
 smoothing_speed = 3.2
 drag_margin_left = 0.05
@@ -38,7 +40,7 @@ editor_draw_drag_margin = true
 [node name="Weapon" parent="." groups=[
 "Ignore",
 ] instance=ExtResource( 3 )]
-position = Vector2( 1.52588e-005, 7.3151 )
+position = Vector2( 1.52588e-05, 7.3151 )
 
 [node name="Gun" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, -13.167 )

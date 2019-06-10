@@ -1,11 +1,10 @@
 extends KinematicBody2D
 
-signal paradas_pra_ui(coisas)
+signal morri()
 
 export(int) var WALKSPEED = 200
 export(int) var JUMPSPEED = 250
 export(int) var GRAVITY = 250
-export(int) var MAXHITPOINTS = 200 
 export(int) var TERMINALVELOCITY = 600
 
 var jumping = false
@@ -13,7 +12,6 @@ var snap_vector = Vector2(0,0.5)
 var floor_normal = Vector2(0,-1)
 var linear_velocity = Vector2(0,0)
 
-var HP = 1
 
 var sob_controle = true
 
@@ -22,7 +20,6 @@ var facing_right = true
 var can_double_jump = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	HP = MAXHITPOINTS
 	add_to_group("Player")
 	$StunTimer.connect("timeout",self,"acabou_stun")
 	pass # Replace with function body.
@@ -31,10 +28,10 @@ func acabou_stun():
 	sob_controle = true
 func damage(val):
 	print("Tomei "+str(val)+" de dano")
-	HP -= val
+	global.health -= val
 func damage_with_knockback(val, knockback = false, direcao = Vector2(0,0), tempo = 0):
 	print("Tomei "+str(val)+" de dano")
-	HP -= val
+	global.health -= val
 	if knockback and sob_controle:
 		linear_velocity = direcao
 		sob_controle = false
@@ -42,9 +39,8 @@ func damage_with_knockback(val, knockback = false, direcao = Vector2(0,0), tempo
 		$StunTimer.start()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if HP <= 0:
-		get_tree().change_scene("res://Scenes/Temp/LevelTest2.tscn")
-	emit_signal("paradas_pra_ui",{"max_life":MAXHITPOINTS,"life":HP})
+	if global.health <= 0:
+		emit_signal("morri")
 	linear_velocity.y += GRAVITY*delta
 	if linear_velocity.y > TERMINALVELOCITY:
 		linear_velocity.y = TERMINALVELOCITY

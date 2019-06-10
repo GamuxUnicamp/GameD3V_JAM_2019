@@ -1,11 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Temp/LevelTest2.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Actors/Enemies/PoisonCoral/Coral.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Actors/Player/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Placeholders/background.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/Actors/Enemies/Peixe/Peixe.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Placeholders/background.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Actors/Enemies/Peixe/Peixe.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/UI/UI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Actors/Player/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Object/Objeto2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Artifact/Artefato.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 497.039, 36.6598 )
@@ -242,68 +245,49 @@ shape = SubResource( 2 )
 [node name="Coral" parent="." instance=ExtResource( 3 )]
 position = Vector2( 520.39, 468.672 )
 
-[node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( -519.328, -926.292 )
-MAXHITPOINTS = 20
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
-
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
-margin_left = 214.838
-margin_top = 92.8973
-margin_right = 1200.84
-margin_bottom = 154.897
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-margin_left = 256.744
-margin_top = 18.1766
-margin_right = 398.744
-margin_bottom = 32.1766
-rect_scale = Vector2( 6.39, 3.37747 )
-text = "Super mega blaster UI"
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 editor/display_folded = true
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground"]
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 centered = false
 
 [node name="Peixes" type="Node2D" parent="."]
 
-[node name="Peixe" parent="Peixes" instance=ExtResource( 6 )]
+[node name="Peixe" parent="Peixes" instance=ExtResource( 5 )]
 position = Vector2( 61.3691, 86.4747 )
-damage = 1
 
-[node name="Peixe2" parent="Peixes" instance=ExtResource( 6 )]
+[node name="Peixe2" parent="Peixes" instance=ExtResource( 5 )]
 position = Vector2( 677.85, 64.1587 )
-damage = 1
 
-[node name="Peixe3" parent="Peixes" instance=ExtResource( 6 )]
+[node name="Peixe3" parent="Peixes" instance=ExtResource( 5 )]
 position = Vector2( 725.272, -103.212 )
-damage = 1
 
-[node name="Peixe4" parent="Peixes" instance=ExtResource( 6 )]
+[node name="Peixe4" parent="Peixes" instance=ExtResource( 5 )]
 position = Vector2( 354.267, -139.475 )
-damage = 1
 
-[node name="Peixe5" parent="Peixes" instance=ExtResource( 6 )]
+[node name="Peixe5" parent="Peixes" instance=ExtResource( 5 )]
 position = Vector2( -370, 110 )
-damage = 1
 
-[node name="Peixe6" parent="Peixes" instance=ExtResource( 6 )]
+[node name="Peixe6" parent="Peixes" instance=ExtResource( 5 )]
 position = Vector2( -171.945, 238.317 )
-damage = 1
 
-[node name="Peixe7" parent="Peixes" instance=ExtResource( 6 )]
+[node name="Peixe7" parent="Peixes" instance=ExtResource( 5 )]
 position = Vector2( 1222.81, 179.738 )
-damage = 1
 
-[node name="Peixe8" parent="Peixes" instance=ExtResource( 6 )]
+[node name="Peixe8" parent="Peixes" instance=ExtResource( 5 )]
 position = Vector2( 1038.7, -62.9494 )
-damage = 1
 
-[node name="Peixe9" parent="Peixes" instance=ExtResource( 6 )]
+[node name="Peixe9" parent="Peixes" instance=ExtResource( 5 )]
 position = Vector2( 1367.86, 6.78824 )
-damage = 1
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 6 )]
+
+[node name="Player" parent="." instance=ExtResource( 7 )]
+position = Vector2( 828.419, 334.238 )
+
+[node name="Pot" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1291.49, 353.964 )
+
+[node name="Artefato" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1116.21, 364.279 )

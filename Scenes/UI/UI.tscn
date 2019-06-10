@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/UI/UI.gd" type="Script" id=1]
+[ext_resource path="res://Placeholders/artefato.png" type="Texture" id=2]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 60.1266
+margin_top = 24.332
+margin_right = 1046.13
+margin_bottom = 86.3317
+rect_scale = Vector2( 0.641665, 0.929413 )
+percent_visible = false
+
+[node name="VidaLabel" type="Label" parent="."]
+margin_left = 293.242
+margin_top = 26.3686
+margin_right = 435.242
+margin_bottom = 40.3686
+rect_scale = Vector2( 4.36353, 3.69815 )
+text = "Vida"
+
+[node name="ArtefatoLabel" type="Label" parent="."]
+margin_left = 1228.91
+margin_top = 34.1226
+margin_right = 1370.91
+margin_bottom = 48.1226
+rect_scale = Vector2( 4.36353, 3.69815 )
+text = "0"
+
+[node name="artefato" type="Sprite" parent="."]
+position = Vector2( 1161.23, 52.5123 )
+texture = ExtResource( 2 )

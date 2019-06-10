@@ -2,9 +2,9 @@ extends Node2D
 
 
 func _ready():
-	$Player.connect("paradas_pra_ui",self,"ui_update")
+	$Player.connect("morri",self,"morreu")
 	pass 
 
-func ui_update(dados):
-	$CanvasLayer/ProgressBar.max_value = dados["max_life"]
-	$CanvasLayer/ProgressBar.value = dados["life"]
+func morreu():
+	global.reset_health()
+	get_tree().change_scene("res://Scenes/Temp/LevelTest2.tscn")
