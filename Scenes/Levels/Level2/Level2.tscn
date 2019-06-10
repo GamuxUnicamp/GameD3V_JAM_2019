@@ -1,15 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Levels/Level2/Level2.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Tilemap/tileset1.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenes/Actors/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Actors/Enemies/PoisonCoral/Coral.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Actors/Enemies/Peixe/Peixe.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Object/Objeto2.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Artifact/Artefato.tscn" type="PackedScene" id=7]
-[ext_resource path="res://batata.jpg" type="Texture" id=8]
-[ext_resource path="res://Scenes/Animations/Fade1.tres" type="Animation" id=9]
-[ext_resource path="res://Scenes/UI/UI.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Object/Objeto2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Artifact/Artefato.tscn" type="PackedScene" id=6]
+[ext_resource path="res://batata.jpg" type="Texture" id=7]
+[ext_resource path="res://Scenes/Animations/Fade1.tres" type="Animation" id=8]
+[ext_resource path="res://Scenes/UI/UI.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 192, 10 )
@@ -1170,184 +1169,181 @@ position = Vector2( 5856, 3424 )
 
 [node name="Fish" type="Node2D" parent="Enemy"]
 
-[node name="Peixe" parent="Enemy/Fish" instance=ExtResource( 5 )]
-position = Vector2( 4575.44, 2995.83 )
-
 [node name="Potes" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Pot" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 5632, 1440 )
 
-[node name="Pot5" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot5" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 5672, 3424 )
 
-[node name="Pot9" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot9" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 7080, 4576 )
 
-[node name="Pot10" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot10" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 7248, 4576 )
 
-[node name="Pot11" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot11" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 7320, 4576 )
 
-[node name="Pot12" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot12" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 8032, 1760 )
 
-[node name="Pot13" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot13" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 8168, 608 )
 
-[node name="Pot14" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot14" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 8248, 608 )
 
-[node name="Pot15" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot15" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 8320, 608 )
 
-[node name="Pot16" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot16" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 8392, 608 )
 
-[node name="Pot17" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot17" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 8464, 608 )
 
-[node name="Pot18" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot18" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 8544, 608 )
 
-[node name="Pot19" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot19" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 8128, 4448 )
 
-[node name="Pot20" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot20" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 7840, 2784 )
 
-[node name="Pot21" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot21" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 8528, 4576 )
 
-[node name="Pot22" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot22" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 8608, 4576 )
 
-[node name="Pot23" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot23" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 8744, 4576 )
 
-[node name="Pot6" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot6" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 4712, 3104 )
 
-[node name="Pot7" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot7" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 4144, 3424 )
 
-[node name="Pot24" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot24" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( -1472, 4000 )
 
-[node name="Pot25" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot25" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( -1400, 4000 )
 
-[node name="Pot26" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot26" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( -1328, 4000 )
 
-[node name="Pot27" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot27" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( -1200, 4000 )
 
-[node name="Pot28" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot28" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( -1112, 4000 )
 
-[node name="Pot29" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot29" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 1952, 2848 )
 
-[node name="Pot30" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot30" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 2120, 2848 )
 
-[node name="Pot31" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot31" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 4384, 2400 )
 
-[node name="Pot42" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot42" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 1192, 2016 )
 
-[node name="Pot43" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot43" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 1256, 2016 )
 
-[node name="Pot33" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot33" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 2816, 1632 )
 
-[node name="Pot36" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot36" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 2464, 1440 )
 
-[node name="Pot37" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot37" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 3168, 1440 )
 
-[node name="Pot40" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot40" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 3232, 1184 )
 
-[node name="Pot32" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot32" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 4552, 2400 )
 
-[node name="Pot39" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot39" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 1360, 2016 )
 
-[node name="Pot50" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot50" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 4136, 1304 )
 
-[node name="Pot47" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot47" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( -960, 2016 )
 
-[node name="Pot44" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot44" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 1424, 2016 )
 
-[node name="Pot49" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot49" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 3960, 1632 )
 
-[node name="Pot46" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot46" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( -896, 2016 )
 
-[node name="Pot45" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot45" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 1488, 2016 )
 
-[node name="Pot51" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot51" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 4264, 1304 )
 
-[node name="Pot48" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot48" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( -832, 2016 )
 
-[node name="Pot34" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot34" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 2944, 1632 )
 
-[node name="Pot35" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot35" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 2592, 1440 )
 
-[node name="Pot38" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot38" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 3296, 1440 )
 
-[node name="Pot41" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot41" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 2528, 1184 )
 
-[node name="Pot8" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot8" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 5312, 3232 )
 
-[node name="Pot2" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot2" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 5744, 1440 )
 
-[node name="Pot3" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot3" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 5808, 1440 )
 
-[node name="Pot4" parent="Potes" instance=ExtResource( 6 )]
+[node name="Pot4" parent="Potes" instance=ExtResource( 5 )]
 position = Vector2( 5920, 1376 )
 
 [node name="Art" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Artefato2" parent="Art" instance=ExtResource( 7 )]
+[node name="Artefato2" parent="Art" instance=ExtResource( 6 )]
 position = Vector2( 8032, 1760 )
 
-[node name="Artefato3" parent="Art" instance=ExtResource( 7 )]
+[node name="Artefato3" parent="Art" instance=ExtResource( 6 )]
 position = Vector2( -960, 2016 )
 
-[node name="Artefato4" parent="Art" instance=ExtResource( 7 )]
+[node name="Artefato4" parent="Art" instance=ExtResource( 6 )]
 position = Vector2( -1400, 4000 )
 
-[node name="Artefato5" parent="Art" instance=ExtResource( 7 )]
+[node name="Artefato5" parent="Art" instance=ExtResource( 6 )]
 position = Vector2( 2528, 1184 )
 
-[node name="Artefato6" parent="Art" instance=ExtResource( 7 )]
+[node name="Artefato6" parent="Art" instance=ExtResource( 6 )]
 position = Vector2( 3960, 1632 )
 
-[node name="Artefato" parent="Art" instance=ExtResource( 7 )]
+[node name="Artefato" parent="Art" instance=ExtResource( 6 )]
 position = Vector2( 8128, 4448 )
 
 [node name="Level_Border" type="Area2D" parent="."]
@@ -1362,7 +1358,7 @@ shape = SubResource( 1 )
 [node name="Image" type="Sprite" parent="Background"]
 modulate = Color( 0.117647, 0.105882, 0.290196, 0.662745 )
 scale = Vector2( 2.88, 2.1 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 centered = false
 
 [node name="Image2" type="Sprite" parent="Background"]
@@ -1370,14 +1366,14 @@ modulate = Color( 0, 0, 0, 0.670588 )
 self_modulate = Color( 100, 100, 100, 1 )
 show_behind_parent = true
 scale = Vector2( 2.88, 2.1 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 centered = false
 
 [node name="FX" type="AnimationPlayer" parent="."]
-anims/fade = ExtResource( 9 )
+anims/fade = ExtResource( 8 )
 
 [node name="Water" type="CanvasModulate" parent="FX"]
 color = Color( 0.690196, 0.843137, 1, 1 )
 
-[node name="UI" parent="." instance=ExtResource( 10 )]
+[node name="UI" parent="." instance=ExtResource( 9 )]
 [connection signal="body_entered" from="Level_Border" to="." method="change_level"]

@@ -2,12 +2,13 @@ extends Control
 
 signal Line_End
 export var PATH = ""
+export(Array) var blabla
 onready var digitos = $Control/Dialogo
 
 
 func _ready():
 	
-	var lines = ["Hello!", "My name is the World!"]
+	var lines = blabla
 	
 	digitos.text = ""
 	$Intervalo.start(0)
@@ -38,6 +39,11 @@ func add_digit():
 		emit_signal("Line_End")
 
 func new_line(line):
-	digitos.text = line
+	digitos.text = line.right(2)
 	digitos.visible_characters = 0
-	print(digitos.text)
+	
+	if line[0] == "L":
+		digitos.add_color_override("font_color_shadow", Color( 0.53, 0.81, 0.98, 1 ))
+		
+	elif line[0] == "S":
+		digitos.add_color_override("font_color_shadow", Color( 0.69, 0.19, 0.38, 1 ))

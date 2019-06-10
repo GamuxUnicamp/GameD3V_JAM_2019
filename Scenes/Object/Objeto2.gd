@@ -12,7 +12,7 @@ func _ready():
 
 func quebrou():
 	#mostra animaçao
-	get_parent().modulate.a = 0.5
+	get_parent().modulate.a = 0
 	if get_parent().tem_coracao:
 		var coracao = coracao_cena.instance()
 		coracao.position = get_parent().position

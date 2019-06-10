@@ -6,7 +6,7 @@
 [node name="Prologo" type="Control"]
 script = ExtResource( 1 )
 PATH = "res://Scenes/Levels/Level1/Level1.tscn"
-blabla = [ "L_Princess!", "hey,,", "I just wanted to say that you're really cool >~< *blushes and looks down shyly*", "oh uh thanks ??", "No problem uwu *waddles up to you*", "I saw that you tweeted about being bi *blushes beet red*", "Would you want to... *looks away un embarrassment* w-w-would you want to have a threesome", "Absolutely fucking not" ]
+blabla = [ "S_CONSEGUE ME OUVIR?", "L_PRINCESA! É VOCÊ, PRINCESA?! " ]
 
 [node name="Control" type="Control" parent="."]
 margin_right = 1366.0
@@ -18,11 +18,11 @@ margin_top = 256.0
 margin_right = 1024.0
 margin_bottom = 287.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_outline_modulate = Color( 0.678431, 0.984314, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0.784314, 0.988235, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 0
+custom_constants/shadow_as_outline = 0
 text = "Oi eu sou opedrimho. Vem ser meu Amigo!
-Quero fazer coco na sua casa.
-Quer fazer coco na minha?
-
 "
 align = 1
 
@@ -30,7 +30,8 @@ align = 1
 wait_time = 0.1
 
 [node name="Intervalo" type="Timer" parent="."]
-wait_time = 3.2
+wait_time = 2.5
+one_shot = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
