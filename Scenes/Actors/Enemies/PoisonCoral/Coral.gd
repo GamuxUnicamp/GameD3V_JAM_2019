@@ -17,6 +17,8 @@ func _ready():
 func voltei():
 	$Sprite.show()
 	remove_from_group("Ignore")
+	for body in get_overlapping_bodies():
+		jogador_entrou(body)
 
 func damage(val):
 	print("Coral: Tomei "+str(val)+" de dano")

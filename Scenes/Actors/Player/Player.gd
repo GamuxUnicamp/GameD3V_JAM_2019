@@ -40,6 +40,7 @@ func damage_with_knockback(val, knockback = false, direcao = Vector2(0,0), tempo
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if global.health <= 0:
+		global.reset_health()
 		emit_signal("morri")
 	linear_velocity.y += GRAVITY*delta
 	if linear_velocity.y > TERMINALVELOCITY:
