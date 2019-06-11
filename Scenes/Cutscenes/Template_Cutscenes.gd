@@ -22,7 +22,7 @@ func _ready():
 		yield($Intervalo, "timeout")
 	
 	digitos.text = ""
-	$Intervalo.start(1.3)
+	$Intervalo.start(0)
 	yield($Intervalo, "timeout")
 	
 	get_tree().change_scene(PATH)
