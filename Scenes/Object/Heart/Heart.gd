@@ -7,6 +7,7 @@ func _ready():
 	random.randomize()
 	heal = random.randi_range(1,3)
 	connect("body_entered",self,"pegou")
+	add_to_group("Ignore")
 
 
 func pegou(body):

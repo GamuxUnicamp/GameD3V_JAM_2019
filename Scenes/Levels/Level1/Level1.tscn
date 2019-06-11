@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/Levels/Level1/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Tilemap/tileset1.tres" type="TileSet" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Placeholders/background.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Animations/Fade1.tres" type="Animation" id=8]
 [ext_resource path="res://Scenes/UI/UI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Actors/Enemies/Peixe/Peixe.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Portao/Portao.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Placeholders/artefato.png" type="Texture" id=12]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_out"
@@ -379,4 +382,14 @@ position = Vector2( 184, 304 )
 shape = SubResource( 2 )
 
 [node name="UI" parent="." instance=ExtResource( 9 )]
+
+[node name="Peixe" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2517.29, 471.443 )
+
+[node name="Portao" parent="." instance=ExtResource( 11 )]
+position = Vector2( 3199.33, 3428.31 )
+
+[node name="Sprite2" type="Sprite" parent="Portao"]
+self_modulate = Color( 1, 1, 1, 0.286275 )
+texture = ExtResource( 12 )
 [connection signal="body_entered" from="Level_Border" to="." method="change_level"]

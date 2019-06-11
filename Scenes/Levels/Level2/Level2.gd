@@ -34,4 +34,5 @@ func change_level(body):
 		yield($FX,"animation_finished")
 		$FX.set_speed_scale(1)
 		
+		global.mission_artifacts = 0
 		get_tree().change_scene("res://Scenes/Temp/LevelTest2.tscn")
