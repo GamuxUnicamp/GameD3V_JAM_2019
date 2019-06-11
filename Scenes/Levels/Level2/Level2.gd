@@ -35,5 +35,9 @@ func change_level(body):
 		$FX.set_speed_scale(1)
 		
 		global.mission_artifacts = 0
-		get_tree().quit()
-		#get_tree().change_scene("res://Scenes/Temp/LevelTest2.tscn")
+		
+		#Teste define final baseado no numero de arteftos do jogado
+		if global.artifacts <= 8:
+			get_tree().quit()
+		else:
+			get_tree().change_scene("res://Scenes/Cutscenes/Final_Decepcao/Final_Decepcao.tscn")
