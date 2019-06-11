@@ -3,10 +3,10 @@
 [ext_resource path="res://Scenes/Portao/Portao.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Portao/portao.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 255.613, 63.833 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 256.534, 91.4418 )
 
 [node name="Portao" type="StaticBody2D"]
@@ -18,9 +18,9 @@ scale = Vector2( 1.33313, 1 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
