@@ -1,8 +1,8 @@
 extends StaticBody2D
 
 
-# Declare member variables here. Examples:
-# var a
+
+
 var coracao_cena = load("res://Scenes/Object/Heart/Heart.tscn")
 
 
@@ -12,7 +12,7 @@ func _ready():
 
 func quebrou():
 	#mostra animaçao
-	get_parent().modulate.a = 0.5
+	get_parent().modulate.a = 0
 	if get_parent().tem_coracao:
 		var coracao = coracao_cena.instance()
 		coracao.position = get_parent().position

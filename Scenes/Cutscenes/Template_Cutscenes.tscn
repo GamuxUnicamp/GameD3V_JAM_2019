@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Cutscenes/Template_Cutscenes.gd" type="Script" id=1]
+[ext_resource path="res://batata.jpg" type="Texture" id=2]
+
+[node name="Prologo" type="Control"]
+script = ExtResource( 1 )
+PATH = "res://Scenes/Levels/Level1/Level1.tscn"
+blabla = [ "L_Princess!", "hey,,", "I just wanted to say that you're really cool >~< *blushes and looks down shyly*", "oh uh thanks ??", "No problem uwu *waddles up to you*", "I saw that you tweeted about being bi *blushes beet red*", "Would you want to... *looks away un embarrassment* w-w-would you want to have a threesome", "Absolutely fucking not" ]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1366.0
+margin_bottom = 768.0
+
+[node name="Dialogo" type="Label" parent="Control"]
+margin_left = 341.0
+margin_top = 256.0
+margin_right = 1024.0
+margin_bottom = 287.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.678431, 0.984314, 1, 1 )
+text = "Oi eu sou opedrimho. Vem ser meu Amigo!
+Quero fazer coco na sua casa.
+Quer fazer coco na minha?
+
+"
+align = 1
+
+[node name="Digito" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Intervalo" type="Timer" parent="."]
+wait_time = 3.2
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="IMAGE" type="Sprite" parent="ParallaxBackground"]
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 2.88, 2.12 )
+texture = ExtResource( 2 )
+centered = false
+flip_v = true
+[connection signal="timeout" from="Digito" to="." method="add_digit"]
