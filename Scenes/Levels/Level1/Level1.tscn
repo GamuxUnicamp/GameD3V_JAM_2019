@@ -311,11 +311,16 @@ position = Vector2( 4485.78, 2937.48 )
 [node name="Player" parent="Actors" instance=ExtResource( 4 )]
 position = Vector2( 2024, 2808 )
 
+[node name="Peixe3" parent="Actors" instance=ExtResource( 5 )]
+position = Vector2( 8900.73, 2935.55 )
+
 [node name="Peixe" parent="Actors" instance=ExtResource( 5 )]
 position = Vector2( 2336, 2952 )
 
+[node name="Peixe2" parent="Actors" instance=ExtResource( 5 )]
+position = Vector2( 8735.71, 2935.55 )
+
 [node name="Potes" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Objeto" parent="Potes" instance=ExtResource( 6 )]
 position = Vector2( 8456, 2720 )
@@ -334,12 +339,6 @@ position = Vector2( 4800, 544 )
 [node name="Objeto7" parent="Potes" instance=ExtResource( 6 )]
 position = Vector2( 8544, 96 )
 tem_coracao = false
-
-[node name="Objeto12" parent="Potes" instance=ExtResource( 5 )]
-position = Vector2( 8924.73, 543.546 )
-
-[node name="Objeto13" parent="Potes" instance=ExtResource( 5 )]
-position = Vector2( 8759.71, 543.546 )
 
 [node name="Objeto8" parent="Potes" instance=ExtResource( 6 )]
 position = Vector2( 4128, 3808 )
@@ -379,7 +378,6 @@ centered = false
 
 [node name="Teste" type="Sprite" parent="Background"]
 modulate = Color( 1, 1, 1, 0.635294 )
-position = Vector2( 1464, 1184 )
 texture = ExtResource( 8 )
 centered = false
 

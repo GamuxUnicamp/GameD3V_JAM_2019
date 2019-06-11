@@ -1,11 +1,8 @@
 extends Area2D
 
-var heal = 0;
+export var heal = 1;
 
 func _ready():
-	var random = RandomNumberGenerator.new()
-	random.randomize()
-	heal = random.randi_range(1,3)
 	connect("body_entered",self,"pegou")
 	add_to_group("Ignore")
 
@@ -17,5 +14,3 @@ func pegou(body):
 		if global.health  > global.max_health:
 			global.health  = global.max_health
 		queue_free()
-
-	pass
