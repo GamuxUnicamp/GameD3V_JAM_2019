@@ -18,11 +18,11 @@ var sob_controle = true
 var facing_right = true
 
 var can_double_jump = false
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	add_to_group("Player")
 	$StunTimer.connect("timeout",self,"acabou_stun")
-	pass # Replace with function body.
+	pass
 
 func acabou_stun():
 	sob_controle = true
@@ -37,7 +37,7 @@ func damage_with_knockback(val, knockback = false, direcao = Vector2(0,0), tempo
 		sob_controle = false
 		$StunTimer.wait_time = tempo
 		$StunTimer.start()
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	if global.health <= 0:
 		global.reset_health()
@@ -84,5 +84,3 @@ func _process(delta):
 		move_and_slide_with_snap(linear_velocity, snap_vector, floor_normal)
 	else:
 		move_and_slide(linear_velocity, floor_normal)
-	#print(guarda)
-#	pass

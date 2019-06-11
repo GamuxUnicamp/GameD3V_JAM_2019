@@ -1,8 +1,5 @@
 extends Position2D
 
-
-
-
 var can_attack = true
 var bolha_scene = load("res://Scenes/Actors/Player/Weapons/BolhaAtaque.tscn")
 
@@ -16,7 +13,7 @@ func _ready():
 	$Cooldown.wait_time = attack_cooldown
 	if $Cooldown.connect("timeout",self,"reloaded") != 0:
 		print("Failed to connect Signal")
-	pass # Replace with function body.
+	pass 
 
 func reloaded():
 	can_attack = true

@@ -1,8 +1,6 @@
 extends StaticBody2D
 
 
-
-
 var coracao_cena = load("res://Scenes/Object/Heart/Heart.tscn")
 
 
