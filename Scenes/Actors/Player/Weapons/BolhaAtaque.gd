@@ -25,7 +25,6 @@ func bateu(body):
 		if body.is_in_group(enemy):
 			if body.has_method("damage"):
 				body.damage(damage)
-				print("Dei "+str(damage)+" de dano.")
 		queue_free()
 
 		

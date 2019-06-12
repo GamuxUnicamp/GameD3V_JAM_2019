@@ -610,12 +610,10 @@ centered = false
 
 [node name="Teste" type="Sprite" parent="Background"]
 modulate = Color( 1, 1, 1, 0.635294 )
-
 texture = ExtResource( 9 )
 centered = false
 
 [node name="FX" type="AnimationPlayer" parent="."]
-
 editor/display_folded = true
 anims/fade = ExtResource( 10 )
 anims/fade_out = SubResource( 1 )

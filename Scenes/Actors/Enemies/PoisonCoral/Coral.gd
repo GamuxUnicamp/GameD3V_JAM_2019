@@ -21,7 +21,6 @@ func voltei():
 		jogador_entrou(body)
 
 func damage(val):
-	print("Coral: Tomei "+str(val)+" de dano")
 	$Sprite.hide()
 	$RegrowTimer.start()
 	add_to_group("Ignore")

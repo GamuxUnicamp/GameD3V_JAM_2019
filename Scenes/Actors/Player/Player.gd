@@ -27,10 +27,8 @@ func _ready():
 func acabou_stun():
 	sob_controle = true
 func damage(val):
-	print("Tomei "+str(val)+" de dano")
 	global.health -= val
 func damage_with_knockback(val, knockback = false, direcao = Vector2(0,0), tempo = 0):
-	print("Tomei "+str(val)+" de dano")
 	global.health -= val
 	if knockback and sob_controle:
 		linear_velocity = direcao
