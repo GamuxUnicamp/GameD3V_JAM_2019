@@ -82,3 +82,12 @@ func _process(delta):
 		move_and_slide_with_snap(linear_velocity, snap_vector, floor_normal)
 	else:
 		move_and_slide(linear_velocity, floor_normal)
+		
+	if $Weapon.atacando:
+		$AnimationPlayer.play("Attack")
+	elif not is_on_floor():
+		$AnimationPlayer.play("Jump")
+	elif linear_velocity.x == 0:
+		$AnimationPlayer.play("Idle")
+	elif $AnimationPlayer.current_animation != "Walking":
+		$AnimationPlayer.play("Walking")

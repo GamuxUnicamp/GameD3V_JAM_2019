@@ -6,14 +6,14 @@
 [ext_resource path="res://Scenes/Actors/Enemies/PoisonCoral/Coral.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Actors/Player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Actors/Enemies/Peixe/Peixe.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Object/Objeto2.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Artifact/Artefato.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Placeholders/background.png" type="Texture" id=9]
-[ext_resource path="res://Scenes/Animations/Fade1.tres" type="Animation" id=10]
-[ext_resource path="res://Scenes/UI/UI.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Portao/Portao.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Placeholders/artefato.png" type="Texture" id=13]
-[ext_resource path="res://Scenes/Actors/Enemies/PeixeEspada/PeixeEspada.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Actors/Enemies/PeixeEspada/PeixeEspada.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Object/Objeto2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Artifact/Artefato.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Placeholders/background.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Animations/Fade1.tres" type="Animation" id=11]
+[ext_resource path="res://Scenes/UI/UI.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Portao/Portao.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Placeholders/artefato.png" type="Texture" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_out"
@@ -480,64 +480,70 @@ position = Vector2( 3840, 3000 )
 [node name="Peixe2" parent="Actors" instance=ExtResource( 6 )]
 position = Vector2( 8432, 2888 )
 
+[node name="PeixeEspada" parent="Actors" instance=ExtResource( 7 )]
+position = Vector2( 8224, 2168 )
+
+[node name="PeixeEspada2" parent="Actors" instance=ExtResource( 7 )]
+position = Vector2( 5384, 5328 )
+
 [node name="Potes" type="Node2D" parent="."]
 
-[node name="Objeto" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 8456, 2720 )
 
-[node name="Objeto4" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto4" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 4952, 545.48 )
 
-[node name="Objeto5" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto5" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 4872, 544 )
 tem_coracao = false
 
-[node name="Objeto6" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto6" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 4800, 544 )
 
-[node name="Objeto7" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto7" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 8544, 96 )
 tem_coracao = false
 
-[node name="Objeto15" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto15" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 8608, 672 )
 
-[node name="Objeto16" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto16" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 8920, 544 )
 
-[node name="Objeto12" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto12" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 7832, 608 )
 tem_coracao = false
 
-[node name="Objeto13" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto13" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 7744, 608 )
 
-[node name="Objeto8" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto8" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 4128, 3808 )
 
-[node name="Objeto9" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto9" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 4192, 3808 )
 
-[node name="Objeto10" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto10" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 4256, 3808 )
 
-[node name="Objeto11" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto11" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 4320, 3808 )
 
-[node name="Objeto14" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto14" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 3880, 2848 )
 tem_coracao = false
 
-[node name="Objeto2" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto2" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 8352, 2720 )
 
-[node name="Objeto3" parent="Potes" instance=ExtResource( 7 )]
+[node name="Objeto3" parent="Potes" instance=ExtResource( 8 )]
 position = Vector2( 8528, 2720 )
 
 [node name="Art" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Artefato" parent="Art" instance=ExtResource( 8 )]
+[node name="Artefato" parent="Art" instance=ExtResource( 9 )]
 position = Vector2( 3880, 2848 )
 
 [node name="Background" type="ParallaxBackground" parent="."]
@@ -546,17 +552,17 @@ layer = -3
 
 [node name="Image" type="Sprite" parent="Background"]
 modulate = Color( 1, 1, 1, 0.776471 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 centered = false
 
 [node name="Teste" type="Sprite" parent="Background"]
 modulate = Color( 1, 1, 1, 0.635294 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 centered = false
 
 [node name="FX" type="AnimationPlayer" parent="."]
 editor/display_folded = true
-anims/fade = ExtResource( 10 )
+anims/fade = ExtResource( 11 )
 anims/fade_out = SubResource( 1 )
 
 [node name="Water" type="CanvasModulate" parent="FX"]
@@ -570,19 +576,13 @@ position = Vector2( 3016, 3208 )
 position = Vector2( 184, 304 )
 shape = SubResource( 2 )
 
-[node name="UI" parent="." instance=ExtResource( 11 )]
+[node name="UI" parent="." instance=ExtResource( 12 )]
 
-[node name="Portao" parent="." instance=ExtResource( 12 )]
+[node name="Portao" parent="." instance=ExtResource( 13 )]
 position = Vector2( 3200, 3392 )
 
 [node name="Hole" type="Sprite" parent="Portao"]
 self_modulate = Color( 0.0784314, 0.0784314, 0.0784314, 0.760784 )
 position = Vector2( 0, -24 )
-texture = ExtResource( 13 )
-
-[node name="PeixeEspada" parent="." instance=ExtResource( 14 )]
-position = Vector2( 8248, -224 )
-
-[node name="PeixeEspada2" parent="." instance=ExtResource( 14 )]
-position = Vector2( 5408, 2936 )
+texture = ExtResource( 14 )
 [connection signal="body_entered" from="Level_Border" to="." method="change_level"]
