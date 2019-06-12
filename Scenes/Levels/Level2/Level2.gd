@@ -39,7 +39,7 @@ func change_level(body):
 		global.mission_artifacts = 0
 		
 		#Teste define final baseado no numero de arteftos do jogado
-		if global.artifacts <= max_artifacts:
+		if global.artifacts >= max_artifacts:
 			get_tree().change_scene("res://Scenes/Cutscenes/Final_Abandono/Final_Abandono.tscn")
 		else:
 			get_tree().change_scene("res://Scenes/Cutscenes/Final_Decepcao/Final_Decepcao.tscn")
