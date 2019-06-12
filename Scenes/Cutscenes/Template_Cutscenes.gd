@@ -1,7 +1,7 @@
 extends Control
 
 signal Line_End
-export var PATH = ""
+export var next_scene = ""
 export(Array) var blabla
 onready var digitos = $Control/Dialogo
 
@@ -25,7 +25,11 @@ func _ready():
 	$Intervalo.start(0)
 	yield($Intervalo, "timeout")
 	
-	get_tree().change_scene(PATH)
+	if next_scene == "quit":
+		get_tree().quit()
+		
+	else:
+		get_tree().change_scene(next_scene)
 
 func add_digit():
 	
