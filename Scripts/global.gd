@@ -13,3 +13,6 @@ func reset_health():
 	artifacts -= mission_artifacts
 	mission_artifacts = 0
 	health = max_health
+	
+func game_load():
+	pass

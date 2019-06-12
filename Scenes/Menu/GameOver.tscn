@@ -1,70 +1,74 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://imagens/death.png" type="Texture" id=1]
-[ext_resource path="res://imagens/icon.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Menu/buttons/ContinueButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Menu/GameOver.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Menu/buttons/ContinueButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/Creta/Creta.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scenes/Menu/buttons/MenuButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://imagens/background_1.jpg" type="Texture" id=5]
+[ext_resource path="res://Placeholders/background.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/Creta/Creata DEMO.otf" type="DynamicFontData" id=6]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.203922, 0.141176, 0.74902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.203922, 0.141176, 0.74902, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 6 )
 
 [node name="Gameover" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 1.0
 margin_bottom = -3.0
+script = ExtResource( 1 )
 
-[node name="menu" type="VBoxContainer" parent="."]
-margin_left = 120.0
-margin_top = 36.0
-margin_right = 920.0
-margin_bottom = 500.0
-
-[node name="TextureRect" type="TextureRect" parent="menu"]
-margin_right = 800.0
-margin_bottom = 150.0
-texture = ExtResource( 1 )
-stretch_mode = 4
-
-[node name="center row" type="HBoxContainer" parent="menu"]
-margin_top = 154.0
-margin_right = 800.0
-margin_bottom = 464.0
-size_flags_vertical = 3
-alignment = 1
-
-[node name="CenterContainer" type="CenterContainer" parent="menu/center row"]
-margin_right = 398.0
-margin_bottom = 310.0
-size_flags_horizontal = 3
-
-[node name="TextureRect" type="TextureRect" parent="menu/center row/CenterContainer"]
-margin_left = 167.0
-margin_top = 123.0
-margin_right = 231.0
-margin_bottom = 187.0
-texture = ExtResource( 2 )
-
-[node name="botoes" type="VBoxContainer" parent="menu/center row"]
-margin_left = 402.0
-margin_right = 800.0
-margin_bottom = 310.0
+[node name="botoes" type="VBoxContainer" parent="."]
+margin_left = 505.732
+margin_top = 236.822
+margin_right = 903.732
+margin_bottom = 700.822
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
-[node name="ContinueButton" parent="menu/center row/botoes" instance=ExtResource( 3 )]
-margin_top = 93.0
+[node name="ContinueButton" parent="botoes" instance=ExtResource( 2 )]
+margin_top = 169.0
 margin_right = 398.0
-margin_bottom = 153.0
+margin_bottom = 230.0
 rect_min_size = Vector2( 360, 60 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Continuar"
 
-[node name="NewGameButton" parent="menu/center row/botoes" instance=ExtResource( 4 )]
-margin_top = 157.0
+[node name="MenuButton" parent="botoes" instance=ExtResource( 4 )]
+margin_top = 234.0
 margin_right = 398.0
-margin_bottom = 217.0
-align = 2
+margin_bottom = 295.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Menu"
 
 [node name="Sprite" type="Sprite" parent="."]
 show_behind_parent = true
 position = Vector2( 691.819, 383.473 )
 scale = Vector2( 1.05835, 1.04991 )
 texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 417.638
+margin_top = 111.418
+margin_right = 951.638
+margin_bottom = 264.418
+custom_fonts/font = SubResource( 2 )
+text = "You Died"
+align = 1
