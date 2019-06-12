@@ -1,26 +1,30 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scenes/Actors/Enemies/Peixe/Peixe.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Actors/Enemies/Peixe/peixe.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Actors/Enemies/PeixeEspada/PeixeEspada.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Actors/Enemies/PeixeEspada/peixe_espada.png" type="Texture" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 20.2472
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 21.0297
+height = 139.676
 
 [sub_resource type="CapsuleShape2D" id=2]
+height = 4.90598
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 357.891
+radius = 688.468
 
-[node name="Peixe" type="KinematicBody2D"]
+[node name="PeixeEspada" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 1 )
 
 [node name="peixe" type="Sprite" parent="."]
-scale = Vector2( -1, 1 )
+scale = Vector2( -0.5, 0.5 )
 texture = ExtResource( 2 )
 offset = Vector2( -5, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.52588e-05, 0 )
+rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="Boca" type="Area2D" parent="." groups=[
@@ -28,7 +32,7 @@ shape = SubResource( 1 )
 ]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boca"]
-position = Vector2( 19.367, 9.91899 )
+position = Vector2( 93.1827, 0.743834 )
 rotation = 0.0182238
 shape = SubResource( 2 )
 
@@ -40,3 +44,9 @@ shape = SubResource( 2 )
 shape = SubResource( 3 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="LockTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="ChageCooldown" type="Timer" parent="."]
+one_shot = true

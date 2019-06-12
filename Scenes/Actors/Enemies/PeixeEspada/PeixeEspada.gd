@@ -12,9 +12,13 @@ export(float)var cooldown = 0.5
 export(int)var HP = 30
 var velocity = Vector2(0,0)
 var speed = 100
+var charge_speed = 500
+var charge_duration = 2
+var charge_cooldown = 5
+var can_charge = true
 var alvo = null
 var locked = false
-
+# Called when the node enters the scene tree for the first time.
 func can_see_player():
 	if alvo == null:
 		return false
@@ -24,9 +28,12 @@ func can_see_player():
 		if ($RayCast2D.get_collider()).is_in_group("Player"):
 			return true
 	return false
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	randomize()
+	$ChageCooldown.connect("timeout",self,"charge_cd")
+	$ChageCooldown.wait_time = charge_cooldown+charge_duration
+	$LockTimer.connect("timeout",self,"unlock")
 	add_to_group("Enemy")
 	if $Deteccao.connect("body_entered",self,"player_entrou")!= 0:
 		print("connection error")
@@ -45,11 +52,13 @@ func body_entered(body):
 		elif body.has_method("damage"):
 			body.damage(attack_damage)
 		locked = true
-		get_tree().create_timer(cooldown).connect("timeout",self,"unlock")
-		pass
+		$LockTimer.wait_time = cooldown
+		$LockTimer.start()
 	pass
 func unlock():
 	locked = false
+func charge_cd():
+	can_charge = true
 func saiu_da_parede():
 	saindo_da_parede = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -58,10 +67,27 @@ func _process(delta):
 		queue_free()
 	if not alvo == null and can_see_player():
 		if not locked:
-			velocity = (alvo.position-position).normalized()*speed
-			movepeixe()
+			if can_charge:
+				velocity = (position-alvo.position).normalized()*charge_speed
+				rotation = velocity.angle()+PI
+				if velocity.x > 0:
+					$Boca.scale.y = -1
+					$peixe.flip_v = true
+				if velocity.x < 0:
+					$Boca.scale.y = 1
+					$peixe.flip_v = false
+				locked = true
+				can_charge = false
+				$LockTimer.wait_time = charge_duration
+				$LockTimer.start()
+				$ChageCooldown.start()
+			else:
+				velocity = (alvo.position-position).normalized()*speed
+				movepeixe()
+				pass
 		else:
-			move_and_slide(velocity*-2,Vector2(0,-1))
+			
+			move_and_slide(velocity*-1,Vector2(0,-1))
 	else:
 		if direction == null:
 			direction = Vector2(1,0)
@@ -77,7 +103,7 @@ func _process(delta):
 		else:
 			velocity = (direction-position).normalized()*speed
 			movepeixe()
-			
+
 func movepeixe():
 	rotation = velocity.angle()
 	if velocity.x < 0:
@@ -94,7 +120,8 @@ func damage_with_knockback(val, knockback = false, direcao = Vector2(0,0), tempo
 	if knockback:
 		velocity = -direcao
 		locked = true
-		get_tree().create_timer(tempo).connect("timeout",self,"unlock")
+		$LockTimer.wait_time = tempo
+		$LockTimer.start()
 func player_entrou(body):
 	if body.is_in_group("Player"):
 		alvo = body
