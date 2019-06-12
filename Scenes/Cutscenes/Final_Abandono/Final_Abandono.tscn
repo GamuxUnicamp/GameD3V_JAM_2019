@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Cutscenes/Template_Cutscenes.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/AC/AC.tres" type="DynamicFont" id=2]
+[ext_resource path="res://batata.jpg" type="Texture" id=3]
+
+[node name="Final_Abandono" type="Control"]
+script = ExtResource( 1 )
+PATH = "res://Scenes/Cutscenes/Prologo/Prologo.tscn"
+blabla = [ "S_Meu cavaleiro!", "L_Minha princesa!", "L_Eu consegui!", "L_ Coletei todos os Artefatos!", "S_Sim... Eu posso sentir...", "L_O... O que está acontecendo?", "S_Os artefatos... Minha magia...", "S_Etsão voltando para mim.", "L_Sim!", "L_Você está forte novamente!", "S_Sim", "S_Hoje meu plano se tornara realidade.", "L_Plano?", "S_Venha comigo", "S_E extermine meus inimigos.", "L_Exterminar...?", "S_Os traidores", "S_Os peixes asquerosos desta prisão", "S_Não poupe ninguém.", "L_Princesa...", "L_Certamente existe um meio mais nobre...", "S_Você exita.", "L_Você não é assim...", "L_Eu não entendo...", "S_Você não precisa entender", "S_Apenas obedecer.", "L_Princesa...", "S_Que seja.", "S_Você foi util.", "S_Não irei machucá-lo.", "S_Viva sua vida...", "S_Adeus.", "L_Princesa!", "L_Princesa?", "L_Princesa...", "L_   ", "L_Adeus." ]
+
+[node name="Control" type="HBoxContainer" parent="."]
+margin_right = 1366.0
+margin_bottom = 768.0
+alignment = 1
+
+[node name="Dialogo" type="Label" parent="Control"]
+margin_left = 320.0
+margin_top = 327.0
+margin_right = 1046.0
+margin_bottom = 440.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 0.839216 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 0.901961 )
+custom_colors/font_color_shadow = Color( 0.0352941, 0.709804, 0.886275, 0.85098 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+text = "Oi, eu sou o pÊdrinho. Vém ser meu Ämigo!
+"
+align = 1
+
+[node name="Digito" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Intervalo" type="Timer" parent="."]
+wait_time = 3.8
+one_shot = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="IMAGE" type="Sprite" parent="ParallaxBackground"]
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 2.88, 2.12 )
+texture = ExtResource( 3 )
+centered = false
+flip_v = true
+[connection signal="timeout" from="Digito" to="." method="add_digit"]
