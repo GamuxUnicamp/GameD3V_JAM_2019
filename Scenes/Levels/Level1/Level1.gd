@@ -35,4 +35,4 @@ func change_level(body):
 		$FX.set_speed_scale(1)
 		
 		global.mission_artifacts = 0
-		get_tree().change_scene("res://Scenes/Levels/Level2/Level2.tscn")
+		get_tree().change_scene("res://Scenes/Cutscenes/Intervalo/Intervalo.tscn")
