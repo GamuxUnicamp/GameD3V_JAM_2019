@@ -52,7 +52,7 @@ func body_entered(body):
 		elif body.has_method("damage"):
 			body.damage(attack_damage)
 		locked = true
-		velocity *=-1
+		velocity = -1*(position - body.position).normalized()*charge_speed/2
 		$LockTimer.wait_time = cooldown
 		$LockTimer.start()
 	pass

@@ -4,7 +4,7 @@ var max_health = 5
 var health = max_health
 var artifacts = 0
 var mission_artifacts = 0
-var can_shoot = true
+var can_shoot = false
 var cena_atual = ""
 
 
