@@ -8,8 +8,8 @@ radius = 16.6661
 height = 65.3319
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 15.3331
-height = 59.9979
+radius = 34.4767
+height = 36.5442
 
 [node name="Caranguejo" type="KinematicBody2D"]
 collision_layer = 3
@@ -29,7 +29,7 @@ shape = SubResource( 1 )
 ]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -0.666656, -32.0001 )
+position = Vector2( 1.10246, -14.309 )
 rotation = 1.5708
 shape = SubResource( 2 )
 
@@ -37,12 +37,12 @@ shape = SubResource( 2 )
 position = Vector2( -29.5671, -9.59555 )
 
 [node name="RayCastLeftWall" type="RayCast2D" parent="."]
-position = Vector2( -16.6298, -1.81107 )
-rotation = 1.58064
+position = Vector2( -6.01509, 10.1305 )
+rotation = 1.5708
 
 [node name="RayCastRightGround" type="RayCast2D" parent="."]
 position = Vector2( 29.0955, -7.84421 )
 
 [node name="RayCastRightWall" type="RayCast2D" parent="."]
-position = Vector2( 16.2971, -0.530191 )
-rotation = -1.60968
+position = Vector2( 8.33613, 11.4113 )
+rotation = -1.5708
