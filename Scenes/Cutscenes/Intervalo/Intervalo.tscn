@@ -7,7 +7,7 @@
 [node name="Intervalo" type="Control"]
 script = ExtResource( 1 )
 next_scene = "res://Scenes/Levels/Level2/Level2.tscn"
-blabla = [ "S_Meu cavaleiro...", "L_Minha princesa!", "S_Encontre meus artefatos...", "L_Sim!", "L_Esses artefatos irão liberta-la.", "S_Não só isso.", "S_Esses artefatos são a fonte de meu poder.", "S_Meus súditos me trairam.", "S_Me trancafiaram e arrancaram minha magia...", "S_Faça justiça... Meu cavaleiro.", "S_Recupere TODOS os artefatos.", "S_Restaure minha força.", "L_Sim!", "L_Farei minha Princesa!", "S_Boa sorte... Meu cavaleiro..." ]
+blabla = [ "S_Meu cavaleiro...", "L_Minha princesa!", "S_Encontre meus artefatos...", "L_Sim!", "L_Esses artefatos irão te libertar.", "S_Não só isso.", "S_Esses artefatos são a fonte de meu poder.", "S_Meus súditos me trairam.", "S_Me trancafiaram e arrancaram minha magia...", "S_Faça justiça... Meu cavaleiro.", "S_Recupere TODOS os artefatos.", "S_Restaure minha força.", "L_Sim!", "L_Farei minha Princesa!", "S_Boa sorte... Meu cavaleiro..." ]
 
 [node name="Control" type="HBoxContainer" parent="."]
 margin_right = 1366.0
