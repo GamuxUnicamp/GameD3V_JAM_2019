@@ -13,7 +13,8 @@ export(int)var weapon_damage = 15
 func _ready():
 	$Cooldown.wait_time = attack_cooldown
 	$Duration.wait_time = attack_duration
-	hide()
+	$SpriteAttacking.hide()
+	$SpriteNormal.show()
 	if $Cooldown.connect("timeout",self,"reloaded") != 0:
 		print("Failed to connect Signal")
 	if $Duration.connect("timeout",self,"attack_ended") != 0:
@@ -43,7 +44,8 @@ func checar_se_bateu(lista):
 				body.damage(weapon_damage)
 
 func attack_ended():
-	hide()
+	$SpriteAttacking.hide()
+	$SpriteNormal.show()
 	atacando = false
 	$Cooldown.start()
 
@@ -53,7 +55,8 @@ func attack():
 		checar_se_bateu(get_overlapping_areas())
 		checar_se_bateu(get_overlapping_bodies())
 		
-		show()
+		$SpriteAttacking.show()
+		$SpriteNormal.hide()
 		atacando = true
 		$Duration.start()
 		can_attack = false
