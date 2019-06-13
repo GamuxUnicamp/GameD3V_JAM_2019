@@ -3,6 +3,7 @@ extends Node2D
 
 func _ready():
 	$Player.connect("morri",self,"morreu")
+	global.save_game("res://Scenes/Temp/LevelTest2.tscn")
 	pass 
 
 func morreu():
