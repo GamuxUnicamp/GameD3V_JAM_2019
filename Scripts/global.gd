@@ -57,3 +57,11 @@ func save_game(cena): #user://savegame.save
 	save_game.close()
 	return
 	pass
+func game_over(FX,Player):
+	Player.queue_free()
+	FX.play_backwards("fade")
+	FX.set_speed_scale(.5)
+	yield(FX,"animation_finished")
+	FX.set_speed_scale(1)
+	global.reset_health()
+	get_tree().change_scene("res://Scenes/Menu/GameOver.tscn")

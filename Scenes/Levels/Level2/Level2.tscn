@@ -30,7 +30,6 @@ tile_data = PoolIntArray( -524257, 4, 0, -524256, 4, 0, -524255, 4, 0, -524254, 
 [node name="Actors" type="Node2D" parent="."]
 
 [node name="Coral" type="Node2D" parent="Actors"]
-editor/display_folded = true
 
 [node name="Coral1" parent="Actors/Coral" instance=ExtResource( 3 )]
 position = Vector2( 7072, 3744 )
