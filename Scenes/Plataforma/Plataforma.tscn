@@ -7,9 +7,8 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 28.3817, 30.1357 )
 
-[sub_resource type="SegmentShape2D" id=2]
-a = Vector2( 4.68036, 430.306 )
-b = Vector2( -0.61969, -205.703 )
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 61.5246, 222.234 )
 
 [node name="Plataforma" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -32,7 +31,7 @@ shape = SubResource( 2 )
 [node name="Sprite" type="Sprite" parent="cabo"]
 show_behind_parent = true
 light_mask = 77
-position = Vector2( 2.11236, 453.481 )
-scale = Vector2( 2.94083, 10.3013 )
+position = Vector2( 5.20324, 305.119 )
+scale = Vector2( 1.49199, 5.665 )
 z_index = 13
 texture = ExtResource( 2 )
