@@ -3,8 +3,9 @@ extends Node2D
 export var max_artifacts = 7
 
 func _ready():
+	global.save_game("res://Scenes/Levels/Level2/Level2.tscn")
 	
-	$Actors/Player.connect("morri",self,"restart_level")
+	$Actors/Player.connect("morri",global,"game_over",[$FX,$Actors/Player])
 	
 	#Controle de jogador 
 	$Actors/Player.sob_controle = false
@@ -19,8 +20,6 @@ func _ready():
 	#Controle de jogador
 	$Actors/Player.sob_controle = true
 	
-func restart_level():
-	get_tree().change_scene("res://Scenes/Levels/Level2/Level2.tscn")
 
 func change_level(body):
 	
