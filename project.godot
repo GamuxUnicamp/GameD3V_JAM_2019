@@ -18,6 +18,7 @@ _global_script_class_icons={
 config/name="Princesa do Abismo"
 run/main_scene="res://Scenes/Menu/Menu.tscn"
 config/icon="res://Icon/main character(logo).png"
+config/version=1.1
 
 [autoload]
 
@@ -39,6 +40,10 @@ window/size/resizable=false
 window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[global]
+
+version=0.0
 
 [input]
 
