@@ -3,6 +3,7 @@ extends Node2D
 export var max_artifacts = 7
 
 func _ready():
+	global.save_game("res://Scenes/Levels/Level2/Level2.tscn")
 	
 	$Actors/Player.connect("morri",self,"restart_level")
 	

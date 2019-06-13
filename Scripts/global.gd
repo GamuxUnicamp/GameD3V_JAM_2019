@@ -20,8 +20,8 @@ func reset_health():
 func game_load():
 	var content = ""
 	var file = File.new()
-	if file.file_exists("res://Scripts/savegame.save"):
-		file.open("res://Scripts/savegame.save", file.READ)
+	if file.file_exists("user://savegame.save"):
+		file.open("user://savegame.save", file.READ)
 		content = file.get_as_text()
 		file.close()
 	var dict = JSON.parse(content)

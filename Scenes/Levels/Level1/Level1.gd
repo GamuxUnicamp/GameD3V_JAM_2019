@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	global.save_game("res://Scenes/Levels/Level1/Level1.tscn")
 	
 	$Actors/Player.connect("morri",self,"restart_level")
 	
