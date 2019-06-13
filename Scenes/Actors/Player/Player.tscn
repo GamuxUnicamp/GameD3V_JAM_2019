@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Actors/Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Actors/Player/Layer 2.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Actors/Player/Weapons/Weapon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Actors/Player/Weapons/Weapon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Actors/Player/Layer 2.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Actors/Player/Weapons/Gun.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Actors/Player/Layer 2 copy 2.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Actors/Player/Layer 2 copy.png" type="Texture" id=6]
@@ -27,6 +27,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ ExtResource( 5 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Weapon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.00992572 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 17.93 ) ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "Idle"
@@ -42,7 +54,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ) ]
+"values": [ ExtResource( 3 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -76,7 +88,19 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.35, 0.6, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Weapon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.00992572, 0.1, 0.35, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 17.93 ), Vector2( 0, 22 ), Vector2( 0, 17.93 ), Vector2( 0, 19 ), Vector2( 0, 17.93 ) ]
 }
 
 [node name="Player" type="KinematicBody2D"]
@@ -84,9 +108,14 @@ script = ExtResource( 1 )
 WALKSPEED = 225
 JUMPSPEED = 230
 
+[node name="Weapon" parent="." groups=[
+"Ignore",
+] instance=ExtResource( 2 )]
+position = Vector2( 0, 17.93 )
+
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -106,11 +135,6 @@ drag_margin_top = 0.25
 drag_margin_right = 0.05
 drag_margin_bottom = 0.0
 editor_draw_drag_margin = true
-
-[node name="Weapon" parent="." groups=[
-"Ignore",
-] instance=ExtResource( 3 )]
-position = Vector2( 1.52588e-05, 7.3151 )
 
 [node name="Gun" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, -13.167 )

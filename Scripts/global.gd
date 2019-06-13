@@ -4,6 +4,7 @@ var max_health = 5
 var health = max_health
 var artifacts = 0
 var mission_artifacts = 0
+var can_shoot = false
 
 func add_artifact():
 	artifacts += 1

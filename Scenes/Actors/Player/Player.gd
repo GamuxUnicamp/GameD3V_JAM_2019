@@ -61,7 +61,7 @@ func _process(delta):
 			$Gun.scale.x = -1
 		if Input.is_action_pressed("ui_j"):
 			$Weapon.attack()
-		if Input.is_action_pressed("ui_k"):
+		if Input.is_action_pressed("ui_k") and global.can_shoot:
 			$Gun.attack()
 		if is_on_ceiling() and linear_velocity.y < 0:
 			linear_velocity.y = 0

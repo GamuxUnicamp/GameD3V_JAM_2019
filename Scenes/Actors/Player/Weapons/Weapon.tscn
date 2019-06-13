@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Actors/Player/Weapons/Weapon.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Actors/Player/Weapons/tridente.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 69.7644, 10 )
+extents = Vector2( 47.3628, 10 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 20.8028
 
 [node name="Weapon" type="Area2D"]
 position = Vector2( 1.52588e-05, 7.62939e-06 )
@@ -18,12 +21,23 @@ one_shot = true
 wait_time = 0.2
 one_shot = true
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 63.5801, -0.647064 )
-scale = Vector2( 1.59122, 0.29005 )
+[node name="SpriteAttacking" type="Sprite" parent="."]
+visible = false
+position = Vector2( 65, -2.808 )
 z_index = 1
 texture = ExtResource( 2 )
 
+[node name="SpriteNormal" type="Sprite" parent="."]
+position = Vector2( 0, -14.252 )
+rotation = -1.5708
+z_index = -1
+texture = ExtResource( 2 )
+offset = Vector2( 0, 15 )
+
 [node name="Shape" type="CollisionShape2D" parent="."]
-position = Vector2( 45.2823, -0.37735 )
+position = Vector2( 21.5156, 0.0627745 )
 shape = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 88.6011, 0.440125 )
+shape = SubResource( 2 )
