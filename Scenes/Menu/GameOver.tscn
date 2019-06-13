@@ -32,13 +32,14 @@ scale = Vector2( 1.05835, 1.04991 )
 texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="Control"]
-margin_left = 496.0
+margin_left = 386.0
 margin_top = 163.0
-margin_right = 871.0
+margin_right = 981.0
 margin_bottom = 308.0
 custom_fonts/font = ExtResource( 3 )
-text = "You Died"
+text = "você morreu"
 align = 1
+uppercase = true
 
 [node name="botoes" type="VBoxContainer" parent="."]
 margin_left = 368.0
@@ -50,7 +51,7 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="ContinueButton" parent="botoes" instance=ExtResource( 4 )]
-margin_top = 84.0
+margin_top = 85.0
 margin_right = 616.0
 margin_bottom = 145.0
 rect_min_size = Vector2( 360, 60 )

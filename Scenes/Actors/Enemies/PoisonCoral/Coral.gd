@@ -1,18 +1,19 @@
 extends Area2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
+
+export(int)var regenerate_time = 5
 export(int)var attack_damage = 1
 export(int)var knockback_value = 300
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
+	$RegrowTimer.set_wait_time(regenerate_time)
 	add_to_group("Enemy")
 	if connect("body_entered",self,"jogador_entrou") != 0:
 		print("connection error")
 	if $RegrowTimer.connect("timeout",self,"voltei") != 0:
 		print("connection error")
-	pass # Replace with function body.
+	pass 
 
 func voltei():
 	$Sprite.show()

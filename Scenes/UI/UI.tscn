@@ -63,7 +63,7 @@ rect_clip_content = true
 [node name="LifeBar" type="ProgressBar" parent="Life"]
 margin_left = 100.0
 margin_top = 34.0
-margin_right = 599.0
+margin_right = 500.0
 margin_bottom = 62.0
 rect_scale = Vector2( 0.641665, 0.929413 )
 custom_styles/fg = SubResource( 1 )

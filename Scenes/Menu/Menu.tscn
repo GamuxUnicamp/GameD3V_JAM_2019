@@ -48,9 +48,9 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="NewGameButton" type="Button" parent="botoes"]
-margin_top = 148.0
+margin_top = 154.0
 margin_right = 398.0
-margin_bottom = 197.0
+margin_bottom = 203.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
@@ -61,9 +61,9 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Novo Jogo"
 
 [node name="ContinueButton" type="Button" parent="botoes"]
-margin_top = 201.0
+margin_top = 207.0
 margin_right = 398.0
-margin_bottom = 262.0
+margin_bottom = 256.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
@@ -73,9 +73,9 @@ custom_fonts/font = ExtResource( 4 )
 text = "Continuar"
 
 [node name="QuitButton" type="Button" parent="botoes"]
-margin_top = 266.0
+margin_top = 260.0
 margin_right = 398.0
-margin_bottom = 315.0
+margin_bottom = 309.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
