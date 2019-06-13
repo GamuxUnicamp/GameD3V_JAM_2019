@@ -10,6 +10,7 @@ export(int)var damage = 15
 var duration = 1.5
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	add_to_group("bolha")
 	if connect("body_entered",self,"bateu") != 0:
 		print("Failed to connect Signal")
 	if connect("area_entered",self,"bateu") != 0:

@@ -11,6 +11,7 @@ export(float)var knockback_duration = 0.5
 export(int)var weapon_damage = 15
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	add_to_group("arma")
 	$Cooldown.wait_time = attack_cooldown
 	$Duration.wait_time = attack_duration
 	$SpriteAttacking.hide()
