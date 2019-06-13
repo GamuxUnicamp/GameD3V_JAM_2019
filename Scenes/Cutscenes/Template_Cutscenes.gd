@@ -51,3 +51,17 @@ func new_line(line):
 		
 	elif line[0] == "S":
 		digitos.add_color_override("font_color_shadow", Color( 0.69, 0.19, 0.38, 1 ))
+
+func _unhandled_input(event):
+	#Skip Line
+	if Input.is_action_pressed("action1") or Input.is_action_pressed("action2"):
+		$Intervalo.stop()
+		$Intervalo.emit_signal("timeout")
+	
+	#Skip cutscene
+	if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_released("ui_cancel"):
+		if next_scene == "quit":
+			get_tree().quit()
+		
+		else:
+			get_tree().change_scene(next_scene)

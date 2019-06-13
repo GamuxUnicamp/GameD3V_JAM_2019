@@ -6,7 +6,7 @@
 
 [node name="Final_Abandono" type="Control"]
 script = ExtResource( 1 )
-next_scene = "quit"
+next_scene = "res://Scenes/Menu/Menu.tscn"
 blabla = [ "S_Meu cavaleiro!", "L_Minha princesa!", "L_Eu consegui!", "L_Coletei todos os Artefatos!", "S_Sim... Eu posso sentir...", "L_O... O que está acontecendo?", "S_Os artefatos... Minha magia...", "S_Estão voltando para mim.", "L_Sim!", "L_Você está forte novamente!", "S_Sim", "S_Hoje meu plano se tornara realidade.", "L_Plano?", "S_Venha comigo", "S_E extermine meus inimigos.", "L_Exterminar...?", "S_Os traidores.", "S_Os peixes asquerosos desta prisão.", "S_Não poupe ninguém.", "L_Princesa...", "L_Certamente existe uma maneira mais nobre...", "S_Você hesita?", "L_Você não é assim...", "L_Eu não entendo...", "S_Você não precisa entender", "S_Apenas obedecer.", "L_Princesa...", "S_Que seja.", "S_Você foi util.", "S_Não irei machucá-lo.", "S_Viva sua vida...", "S_Adeus.", "L_Princesa!", "L_Princesa?", "L_Princesa...", "L_   ", "L_Adeus." ]
 
 [node name="Control" type="HBoxContainer" parent="."]
