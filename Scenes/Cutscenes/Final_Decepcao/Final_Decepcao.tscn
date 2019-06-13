@@ -7,7 +7,7 @@
 [node name="Final_Decepcao" type="Control"]
 script = ExtResource( 1 )
 next_scene = "res://Scenes/Menu/Menu.tscn"
-blabla = [ "S_Meu cavaleiro...", "L_Minha princesa!", "S_Onde estão os artefatos?", "L_ Estão aqui!", "S_...", "L_Princesa?", "S_Meu querido cavaleiro...", "S_Você não me obedeceu.", "L_Mas... Os Artefatos...!", "S_Trouxe alguns... Mas não todos.", "L_Mas... Quantos eram?", "S_Isso importa?", "S_Estamos presos aqui.", "L_Oh... Princesa...", "L_Fracassei...", "S_É verdade...", "S_Mesmo assim você veio.", "S_Você está aqui.", "L_Princesa...", " S_Me abrace." ]
+blabla = [ "S_Meu cavaleiro...", "L_Minha princesa!", "S_Onde estão os artefatos?", "L_ Estão aqui!", "S_...", "L_Princesa?", "S_Meu querido cavaleiro...", "S_Você não me obedeceu.", "L_Mas... Os Artefatos...!", "S_Trouxe alguns... Mas não todos.", "L_Mas... Quantos eram?", "S_Isso importa?", "S_Estamos presos aqui.", "L_Oh... Princesa...", "L_Fracassei...", "S_..." ]
 
 [node name="Control" type="HBoxContainer" parent="."]
 margin_right = 1366.0
