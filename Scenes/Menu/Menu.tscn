@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Menu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/AC/Titulo.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Placeholders/background.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/AC/Buttons.tres" type="DynamicFont" id=4]
-[ext_resource path="res://Fonts/Creta/Creta.tres" type="DynamicFont" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.203922, 0.141176, 0.74902, 1 )
@@ -70,7 +69,7 @@ custom_styles/pressed = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
 custom_styles/disabled = SubResource( 1 )
 custom_styles/normal = SubResource( 1 )
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 4 )
 text = "Continuar"
 
 [node name="QuitButton" type="Button" parent="botoes"]
