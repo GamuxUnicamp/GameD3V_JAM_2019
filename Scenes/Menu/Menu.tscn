@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Menu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/AC/Titulo.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Placeholders/background.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/AC/Buttons.tres" type="DynamicFont" id=4]
+[ext_resource path="res://OGG/Tema original + xilofone com som de onda.ogg" type="AudioStream" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.203922, 0.141176, 0.74902, 1 )
@@ -85,4 +86,8 @@ custom_fonts/font = ExtResource( 4 )
 text = "Sair"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -2.0
 autoplay = true
+stream_paused = true
+mix_target = 1
