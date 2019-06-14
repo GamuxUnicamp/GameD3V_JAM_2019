@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Voz C.wav-35f5697e5fc0cb9fde5956d933ffb62b.sample"
+
+[deps]
+
+source_file="res://WAVE/Efeitos/Voz C.wav"
+dest_files=[ "res://.import/Voz C.wav-35f5697e5fc0cb9fde5956d933ffb62b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

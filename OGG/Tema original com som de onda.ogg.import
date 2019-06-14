@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Tema original com som de onda.ogg-416d3737d091cf9a1484bda558eeb66c.oggstr"
+
+[deps]
+
+source_file="res://OGG/Tema original com som de onda.ogg"
+dest_files=[ "res://.import/Tema original com som de onda.ogg-416d3737d091cf9a1484bda558eeb66c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

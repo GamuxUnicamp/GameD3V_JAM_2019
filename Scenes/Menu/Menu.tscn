@@ -83,3 +83,6 @@ custom_styles/disabled = SubResource( 1 )
 custom_styles/normal = SubResource( 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "Sair"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true

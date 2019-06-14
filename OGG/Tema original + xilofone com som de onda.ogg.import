@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Tema original + xilofone com som de onda.ogg-0f8ca8df4faf48fd3c11f6822935630d.oggstr"
+
+[deps]
+
+source_file="res://OGG/Tema original + xilofone com som de onda.ogg"
+dest_files=[ "res://.import/Tema original + xilofone com som de onda.ogg-0f8ca8df4faf48fd3c11f6822935630d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
