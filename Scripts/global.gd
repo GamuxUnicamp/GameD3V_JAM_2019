@@ -57,6 +57,7 @@ func save_game(cena): #user://savegame.save
 	save_game.close()
 	return
 	pass
+	
 func game_over(FX,Player):
 	Player.set_process(false)
 	FX.play_backwards("fade")

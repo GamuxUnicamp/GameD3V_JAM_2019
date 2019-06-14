@@ -1,7 +1,5 @@
 extends Area2D
 
-
-
 export(int)var regenerate_time = 5
 export(int)var attack_damage = 1
 export(int)var knockback_value = 300
@@ -35,6 +33,3 @@ func jogador_entrou(body):
 			body.damage_with_knockback(attack_damage,true,knockback,0.5)
 		elif body.has_method("damage"):
 			body.damage(attack_damage)
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

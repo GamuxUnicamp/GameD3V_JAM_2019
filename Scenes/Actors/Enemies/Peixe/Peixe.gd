@@ -1,8 +1,6 @@
 extends KinematicBody2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
 var saindo_da_parede = false
 var distance = 300
 var direction = null
