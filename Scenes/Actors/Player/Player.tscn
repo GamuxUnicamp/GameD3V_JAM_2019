@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/Actors/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Actors/Player/Weapons/Weapon.tscn" type="PackedScene" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://Scenes/Actors/Player/Weapons/Gun.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Actors/Player/Layer 2 copy 2.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Actors/Player/Layer 2 copy.png" type="Texture" id=6]
+[ext_resource path="res://WAVE/Efeitos/MorteA.wav" type="AudioStream" id=7]
+[ext_resource path="res://WAVE/Efeitos/Andando.wav" type="AudioStream" id=8]
+[ext_resource path="res://WAVE/Efeitos/Tridente.wav" type="AudioStream" id=9]
+[ext_resource path="res://WAVE/Efeitos/Pulando.wav" type="AudioStream" id=10]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 25.0988
@@ -145,3 +149,18 @@ anims/Attack = SubResource( 2 )
 anims/Idle = SubResource( 3 )
 anims/Jump = SubResource( 4 )
 anims/Walking = SubResource( 5 )
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -10.0
+
+[node name="Attack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -10.0
+
+[node name="Damage" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -10.0
