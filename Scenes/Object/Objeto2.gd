@@ -15,6 +15,7 @@ func quebrou():
 		var coracao = coracao_cena.instance()
 		coracao.position = get_parent().position
 		get_parent().get_parent().add_child(coracao)
+	get_parent().get_node("Quebrar").play()
 	queue_free()
 
 	pass
