@@ -89,4 +89,5 @@ text = "Sair"
 stream = ExtResource( 5 )
 volume_db = -2.0
 autoplay = true
+stream_paused = true
 mix_target = 1
