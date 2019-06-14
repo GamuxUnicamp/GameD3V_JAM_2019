@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Cutscenes/Template_Cutscenes.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/AC/AC.tres" type="DynamicFont" id=2]
+[ext_resource path="res://batata.jpg" type="Texture" id=3]
+[ext_resource path="res://OGG/Tema xilofone.ogg" type="AudioStream" id=4]
+
+[node name="Prologo" type="Control"]
+script = ExtResource( 1 )
+next_scene = "res://Scenes/Levels/Level1/Level1.tscn"
+blabla = [ "S_Consegue me ouvir?", "L_Princesa? ", "L_É você? De verdade?!", "S_Me ajude...", "S_Por favor...!", "L_Como posso?", "S_Nas Profundezas...   Estou presa...", "S_Os artefatos...", "S_Colete todos os Artefatos!", "L_Assim farei!", "S_Nossa conexão...   Minha magia...", "S_Está desaparecendo...", "L_Princesa?", "L_Princesa..." ]
+
+[node name="Control" type="HBoxContainer" parent="."]
+margin_right = 1366.0
+margin_bottom = 768.0
+alignment = 1
+
+[node name="Dialogo" type="Label" parent="Control"]
+margin_left = 320.0
+margin_top = 327.0
+margin_right = 1046.0
+margin_bottom = 440.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 0.839216 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 0.901961 )
+custom_colors/font_color_shadow = Color( 0.0352941, 0.709804, 0.886275, 0.85098 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+text = "Oi, eu sou o pÊdrinho. Vém ser meu Ämigo!
+"
+align = 1
+
+[node name="Digito" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Intervalo" type="Timer" parent="."]
+wait_time = 3.8
+one_shot = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="IMAGE" type="Sprite" parent="ParallaxBackground"]
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 2.88, 2.12 )
+texture = ExtResource( 3 )
+centered = false
+flip_v = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -2.0
+autoplay = true
+[connection signal="timeout" from="Digito" to="." method="add_digit"]
