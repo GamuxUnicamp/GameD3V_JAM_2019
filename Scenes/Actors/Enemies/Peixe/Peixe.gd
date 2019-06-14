@@ -53,6 +53,7 @@ func saiu_da_parede():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if HP <= 0:
+		$Morte.play()
 		queue_free()
 	if not alvo == null and can_see_player():
 		if not locked:
