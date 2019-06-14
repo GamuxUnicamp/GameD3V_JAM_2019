@@ -1,8 +1,6 @@
 extends KinematicBody2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
 var saindo_da_parede = false
 var distance = 300
 var direction = null
@@ -18,7 +16,7 @@ var charge_cooldown = 5
 var can_charge = true
 var alvo = null
 var locked = false
-# Called when the node enters the scene tree for the first time.
+
 func can_see_player():
 	if alvo == null:
 		return false
@@ -41,7 +39,7 @@ func _ready():
 		print("connection error")
 	if $Boca.connect("body_entered",self,"body_entered") != 0:
 		print("connection error")
-	pass # Replace with function body.
+	pass 
 func body_entered(body):
 	if body.is_in_group("Player"):
 		if body.has_method("damage_with_knockback"):
@@ -62,7 +60,7 @@ func charge_cd():
 	can_charge = true
 func saiu_da_parede():
 	saindo_da_parede = false
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	if HP <= 0:
 		queue_free()
