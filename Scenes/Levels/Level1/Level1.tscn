@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scenes/Levels/Level1/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Tilemap/tileset1.tres" type="TileSet" id=2]
@@ -17,7 +17,6 @@
 [ext_resource path="res://Scenes/UI/UI.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Portao/Portao.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Placeholders/artefato.png" type="Texture" id=17]
-[ext_resource path="res://WAVE/Músicas/Ambiente.wav" type="AudioStream" id=18]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_out"
@@ -826,8 +825,4 @@ position = Vector2( 3200, 3392 )
 self_modulate = Color( 0.0784314, 0.0784314, 0.0784314, 0.760784 )
 position = Vector2( 0, -24 )
 texture = ExtResource( 17 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 18 )
-autoplay = true
 [connection signal="body_entered" from="Level_Border" to="." method="change_level"]
