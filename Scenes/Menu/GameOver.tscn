@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Menu/GameOver.gd" type="Script" id=1]
 [ext_resource path="res://Placeholders/background.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Menu/buttons/ContinueButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Fonts/AC/Buttons.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Scenes/Menu/buttons/MenuButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://OGG/Tema xilofone.ogg" type="AudioStream" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.203922, 0.141176, 0.74902, 1 )
@@ -74,3 +75,9 @@ custom_styles/disabled = SubResource( 1 )
 custom_styles/normal = SubResource( 2 )
 custom_fonts/font = ExtResource( 5 )
 text = "Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -2.0
+pitch_scale = 0.5
+autoplay = true
