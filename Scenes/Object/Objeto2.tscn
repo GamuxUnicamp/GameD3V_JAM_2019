@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Placeholders/pote.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Object/Pot.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Object/Objeto2.gd" type="Script" id=3]
+[ext_resource path="res://WAVE/Efeitos/Vaso1.wav" type="AudioStream" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 31.1314
@@ -18,3 +19,6 @@ script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objeto"]
 shape = SubResource( 1 )
+
+[node name="Quebrar" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
