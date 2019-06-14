@@ -51,11 +51,19 @@ func _process(delta):
 		pass
 	move_and_slide_with_snap(velocity,-0.1*normal,normal)
 	pass
-
+func morrer():
+	$Area2D.queue_free()
+	$CollisionShape2D.queue_free()
+	set_process(false)
+	$Death.play()
+	$AnimationPlayer.play("Morrer")
+	yield($Death,"finished")
+	queue_free()
+	pass
 func damage(val):
 	HP-=val
 	if HP <= 0:
-		queue_free()
+		morrer()
 	else:
 		$Sprite.modulate.a = 0.8
 		yield(get_tree().create_timer(0.1),"timeout")

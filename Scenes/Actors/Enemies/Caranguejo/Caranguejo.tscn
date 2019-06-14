@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Actors/Enemies/Caranguejo/Caranguejo.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Actors/Enemies/Caranguejo/caranguejo4.png" type="Texture" id=2]
+[ext_resource path="res://WAVE/Efeitos/Inimigo morrendo.wav" type="AudioStream" id=3]
+[ext_resource path="res://Scenes/Actors/Enemies/Morte.tres" type="Animation" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 16.6661
@@ -46,3 +48,10 @@ position = Vector2( 29.0955, -7.84421 )
 [node name="RayCastRightWall" type="RayCast2D" parent="."]
 position = Vector2( 8.33613, 11.4113 )
 rotation = -1.5708
+
+[node name="Death" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Morrer = ExtResource( 4 )

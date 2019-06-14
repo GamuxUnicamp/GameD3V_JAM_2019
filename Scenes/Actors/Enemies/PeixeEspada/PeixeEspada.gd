@@ -60,10 +60,19 @@ func charge_cd():
 	can_charge = true
 func saiu_da_parede():
 	saindo_da_parede = false
-
+func morrer():
+	$Deteccao.queue_free()
+	$Boca.queue_free()
+	$CollisionShape2D.queue_free()
+	set_process(false)
+	$Death.play()
+	$AnimationPlayer.play("Morrer")
+	yield($Death,"finished")
+	queue_free()
+	pass
 func _process(delta):
 	if HP <= 0:
-		queue_free()
+		morrer()
 	if not alvo == null and can_see_player():
 		if not locked:
 			if can_charge:
