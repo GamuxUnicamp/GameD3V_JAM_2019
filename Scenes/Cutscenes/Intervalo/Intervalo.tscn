@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Cutscenes/Template_Cutscenes.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/AC/AC.tres" type="DynamicFont" id=2]
 [ext_resource path="res://batata.jpg" type="Texture" id=3]
+[ext_resource path="res://OGG/Tema xilofone.ogg" type="AudioStream" id=4]
 
 [node name="Intervalo" type="Control"]
 script = ExtResource( 1 )
 next_scene = "res://Scenes/Levels/Level2/Level2.tscn"
-blabla = [ "S_Meu cavaleiro...", "L_Minha princesa!", "S_Encontre meus artefatos...", "L_Sim!", "L_Esses artefatos irão te libertar.", "S_Não só isso.", "S_Esses artefatos são a fonte de meu poder.", "S_Meus súditos me trairam.", "S_Me trancafiaram e arrancaram minha magia...", "S_Faça justiça... Meu cavaleiro.", "S_Recupere TODOS os artefatos.", "S_Restaure minha força.", "L_Sim!", "L_Farei minha Princesa!", "S_Boa sorte... Meu cavaleiro..." ]
+blabla = [ "S_Meu cavaleiro...", "L_Minha princesa!", "S_Encontre meus artefatos...", "L_Sim!", "L_Esses artefatos irão te libertar.", "S_Não só isso.", "S_Esses artefatos são a fonte de meu poder.", "S_Meus súditos me traíram.", "S_Me trancafiaram e arrancaram minha magia...", "S_Faça justiça... Meu cavaleiro.", "S_Recupere TODOS os artefatos.", "S_Restaure minha força.", "L_Sim!", "L_Farei, minha Princesa!", "S_Boa sorte... Meu cavaleiro..." ]
 
 [node name="Control" type="HBoxContainer" parent="."]
 margin_right = 1366.0
@@ -44,4 +45,10 @@ scale = Vector2( 2.88, 2.12 )
 texture = ExtResource( 3 )
 centered = false
 flip_v = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -5.0
+pitch_scale = 0.5
+autoplay = true
 [connection signal="timeout" from="Digito" to="." method="add_digit"]

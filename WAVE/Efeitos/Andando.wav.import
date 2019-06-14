@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Andando.wav-56c20b90d717ef36877dd8762754629d.sample"
+
+[deps]
+
+source_file="res://WAVE/Efeitos/Andando.wav"
+dest_files=[ "res://.import/Andando.wav-56c20b90d717ef36877dd8762754629d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

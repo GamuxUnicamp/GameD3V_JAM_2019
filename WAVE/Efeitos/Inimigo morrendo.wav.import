@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Inimigo morrendo.wav-da102617eb74c16fef2fe9481e496353.sample"
+
+[deps]
+
+source_file="res://WAVE/Efeitos/Inimigo morrendo.wav"
+dest_files=[ "res://.import/Inimigo morrendo.wav-da102617eb74c16fef2fe9481e496353.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

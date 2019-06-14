@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Inimigo dano 4.wav-2bf93a6ff491502337de8033e4b9cb5b.sample"
+
+[deps]
+
+source_file="res://WAVE/Efeitos/Inimigo dano 4.wav"
+dest_files=[ "res://.import/Inimigo dano 4.wav-2bf93a6ff491502337de8033e4b9cb5b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

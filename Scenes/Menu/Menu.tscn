@@ -4,7 +4,7 @@
 [ext_resource path="res://Fonts/AC/Titulo.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Placeholders/background.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/AC/Buttons.tres" type="DynamicFont" id=4]
-[ext_resource path="res://Fonts/Creta/Creta.tres" type="DynamicFont" id=5]
+[ext_resource path="res://OGG/Tema original + xilofone com som de onda.ogg" type="AudioStream" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.203922, 0.141176, 0.74902, 1 )
@@ -49,9 +49,9 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="NewGameButton" type="Button" parent="botoes"]
-margin_top = 181.0
+margin_top = 154.0
 margin_right = 398.0
-margin_bottom = 230.0
+margin_bottom = 203.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
@@ -62,22 +62,21 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Novo Jogo"
 
 [node name="ContinueButton" type="Button" parent="botoes"]
-visible = false
-margin_top = 201.0
+margin_top = 207.0
 margin_right = 398.0
-margin_bottom = 262.0
+margin_bottom = 256.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
 custom_styles/disabled = SubResource( 1 )
 custom_styles/normal = SubResource( 1 )
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 4 )
 text = "Continuar"
 
 [node name="QuitButton" type="Button" parent="botoes"]
-margin_top = 234.0
+margin_top = 260.0
 margin_right = 398.0
-margin_bottom = 283.0
+margin_bottom = 309.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
@@ -85,3 +84,7 @@ custom_styles/disabled = SubResource( 1 )
 custom_styles/normal = SubResource( 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "Sair"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true

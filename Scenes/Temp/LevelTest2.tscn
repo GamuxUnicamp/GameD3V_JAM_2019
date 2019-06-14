@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scenes/Temp/LevelTest2.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -10,12 +10,17 @@
 [ext_resource path="res://Scenes/Actors/Player/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Object/Objeto2.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Artifact/Artefato.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Actors/Enemies/Caranguejo/Caranguejo.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Plataforma/Plataforma.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scripts/Parada.gd" type="Script" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 497.039, 36.6598 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32.3284, 32.4522 )
+
+[sub_resource type="LineShape2D" id=3]
 
 [node name="LevelTest" type="Node2D"]
 script = ExtResource( 1 )
@@ -270,3 +275,25 @@ position = Vector2( 1291.49, 353.964 )
 
 [node name="Artefato" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1116.21, 364.279 )
+
+[node name="Caranguejo" parent="." instance=ExtResource( 11 )]
+position = Vector2( -96.6043, 170.329 )
+
+[node name="Caranguejo2" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1168.86, 285.403 )
+rotation = 1.39116
+
+[node name="Caranguejo3" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1204.36, 127.399 )
+rotation = 1.39116
+
+[node name="Plataforma" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1078.53, 40.9348 )
+
+[node name="Parada" type="Area2D" parent="."]
+position = Vector2( 880.898, 207.088 )
+script = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parada"]
+position = Vector2( 202.054, 79.9544 )
+shape = SubResource( 3 )

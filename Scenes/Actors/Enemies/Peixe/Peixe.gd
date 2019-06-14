@@ -1,8 +1,6 @@
 extends KinematicBody2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
 var saindo_da_parede = false
 var distance = 300
 var direction = null
@@ -53,9 +51,19 @@ func unlock():
 func saiu_da_parede():
 	saindo_da_parede = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+func morrer():
+	$Deteccao.queue_free()
+	$Boca.queue_free()
+	$CollisionShape2D.queue_free()
+	set_process(false)
+	$Death.play()
+	$AnimationPlayer.play("Morrer")
+	yield($Death,"finished")
+	queue_free()
+	pass
 func _process(delta):
 	if HP <= 0:
-		queue_free()
+		morrer()
 	if not alvo == null and can_see_player():
 		if not locked:
 			velocity = (alvo.position-position).normalized()*speed

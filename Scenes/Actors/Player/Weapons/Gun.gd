@@ -5,8 +5,8 @@ var bolha_scene = load("res://Scenes/Actors/Player/Weapons/BolhaAtaque.tscn")
 
 export(String)var enemy = "Enemy"
 export(String)var ally = "Player"
-export(float)var attack_cooldown = 1
-export(int)var attack_damage = 5
+export(float)var attack_cooldown = 0.5
+export(int)var attack_damage = 10
 export(int)var attack_speed = 300
 
 func _ready():

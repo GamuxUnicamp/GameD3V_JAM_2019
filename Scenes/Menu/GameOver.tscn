@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Menu/GameOver.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Menu/buttons/ContinueButton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Fonts/Creta/Creta.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Scenes/Menu/buttons/MenuButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Placeholders/background.png" type="Texture" id=5]
-[ext_resource path="res://Fonts/AC/AC.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Placeholders/background.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/AC/Titulo.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Scenes/Menu/buttons/ContinueButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Fonts/AC/Buttons.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Scenes/Menu/buttons/MenuButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://OGG/Tema xilofone.ogg" type="AudioStream" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.203922, 0.141176, 0.74902, 1 )
@@ -20,51 +21,63 @@ margin_right = 1.0
 margin_bottom = -3.0
 script = ExtResource( 1 )
 
+[node name="Control" type="HBoxContainer" parent="."]
+margin_right = 1367.0
+margin_bottom = 472.0
+alignment = 1
+
+[node name="Sprite" type="Sprite" parent="Control"]
+show_behind_parent = true
+position = Vector2( 691.819, 383.473 )
+scale = Vector2( 1.05835, 1.04991 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 386.0
+margin_top = 163.0
+margin_right = 981.0
+margin_bottom = 308.0
+custom_fonts/font = ExtResource( 3 )
+text = "você morreu"
+align = 1
+uppercase = true
+
 [node name="botoes" type="VBoxContainer" parent="."]
-margin_left = 505.732
-margin_top = 236.822
-margin_right = 903.732
-margin_bottom = 700.822
+margin_left = 368.0
+margin_top = 322.0
+margin_right = 984.0
+margin_bottom = 616.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
-[node name="ContinueButton" parent="botoes" instance=ExtResource( 2 )]
-margin_top = 169.0
-margin_right = 398.0
-margin_bottom = 230.0
+[node name="ContinueButton" parent="botoes" instance=ExtResource( 4 )]
+margin_top = 85.0
+margin_right = 616.0
+margin_bottom = 145.0
 rect_min_size = Vector2( 360, 60 )
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
 custom_styles/disabled = SubResource( 1 )
 custom_styles/normal = SubResource( 2 )
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 5 )
 text = "Continuar"
 
-[node name="MenuButton" parent="botoes" instance=ExtResource( 4 )]
-margin_top = 234.0
-margin_right = 398.0
-margin_bottom = 295.0
+[node name="MenuButton" parent="botoes" instance=ExtResource( 6 )]
+margin_top = 149.0
+margin_right = 616.0
+margin_bottom = 209.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
 custom_styles/disabled = SubResource( 1 )
 custom_styles/normal = SubResource( 2 )
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 5 )
 text = "Menu"
 
-[node name="Sprite" type="Sprite" parent="."]
-show_behind_parent = true
-position = Vector2( 691.819, 383.473 )
-scale = Vector2( 1.05835, 1.04991 )
-texture = ExtResource( 5 )
-
-[node name="Label" type="Label" parent="."]
-margin_left = 417.638
-margin_top = 111.418
-margin_right = 951.638
-margin_bottom = 264.418
-custom_fonts/font = ExtResource( 6 )
-text = "You Died"
-align = 1
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -2.0
+pitch_scale = 0.5
+autoplay = true

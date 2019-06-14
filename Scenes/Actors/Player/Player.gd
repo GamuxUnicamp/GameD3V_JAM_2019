@@ -28,8 +28,12 @@ func acabou_stun():
 	sob_controle = true
 func damage(val):
 	global.health -= val
+	if global.health > 0:
+		$Damage.play()
 func damage_with_knockback(val, knockback = false, direcao = Vector2(0,0), tempo = 0):
 	global.health -= val
+	if global.health > 0:
+		$Damage.play()
 	if knockback and sob_controle:
 		linear_velocity = direcao
 		sob_controle = false
@@ -39,6 +43,7 @@ func damage_with_knockback(val, knockback = false, direcao = Vector2(0,0), tempo
 func _process(delta):
 	if global.health <= 0:
 		global.reset_health()
+		$Death.play()
 		emit_signal("morri")
 	linear_velocity.y += GRAVITY*delta
 	if linear_velocity.y > TERMINALVELOCITY:
@@ -60,6 +65,8 @@ func _process(delta):
 			$Weapon.scale.x = -1
 			$Gun.scale.x = -1
 		if Input.is_action_pressed("ui_j"):
+			if $Weapon.can_attack:
+				$Attack.play()
 			$Weapon.attack()
 		if Input.is_action_pressed("ui_k") and global.can_shoot:
 			$Gun.attack()
@@ -70,12 +77,14 @@ func _process(delta):
 			if linear_velocity.y > 0:
 				linear_velocity.y = 0
 			if Input.is_action_just_pressed("ui_up"):
+				$Jump.play()
 				linear_velocity.y = -JUMPSPEED
 				jumping = true
 				yield(get_tree().create_timer(0.5),"timeout")
 				jumping = false
 		else:
 			if Input.is_action_just_pressed("ui_up") and can_double_jump:
+				$Jump.play()
 				linear_velocity.y = -JUMPSPEED
 				can_double_jump = false
 	if not jumping:
