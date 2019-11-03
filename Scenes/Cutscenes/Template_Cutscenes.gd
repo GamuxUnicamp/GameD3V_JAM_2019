@@ -53,6 +53,11 @@ func new_line(line):
 		digitos.add_color_override("font_color_shadow", Color( 0.69, 0.19, 0.38, 1 ))
 
 func _unhandled_input(event):
+	#Write all digits quickly
+	if Input.is_action_just_pressed("ui_fast_text"):
+		digitos.visible_characters = digitos.get_total_character_count()
+		emit_signal("Line_End")
+		
 	#Skip Line
 	if Input.is_action_pressed("action1") or Input.is_action_pressed("action2"):
 		$Intervalo.stop()
