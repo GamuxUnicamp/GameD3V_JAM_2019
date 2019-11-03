@@ -5,7 +5,6 @@
 
 [node name="Prologo" type="Control"]
 script = ExtResource( 1 )
-PATH = "res://Scenes/Levels/Level1/Level1.tscn"
 blabla = [ "L_Princess!", "hey,,", "I just wanted to say that you're really cool >~< *blushes and looks down shyly*", "oh uh thanks ??", "No problem uwu *waddles up to you*", "I saw that you tweeted about being bi *blushes beet red*", "Would you want to... *looks away un embarrassment* w-w-would you want to have a threesome", "Absolutely fucking not" ]
 
 [node name="Control" type="Control" parent="."]
@@ -40,4 +39,5 @@ scale = Vector2( 2.88, 2.12 )
 texture = ExtResource( 2 )
 centered = false
 flip_v = true
+
 [connection signal="timeout" from="Digito" to="." method="add_digit"]

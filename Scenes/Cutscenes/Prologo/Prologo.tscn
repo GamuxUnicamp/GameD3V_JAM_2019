@@ -50,4 +50,5 @@ flip_v = true
 stream = ExtResource( 4 )
 volume_db = -2.0
 autoplay = true
+
 [connection signal="timeout" from="Digito" to="." method="add_digit"]

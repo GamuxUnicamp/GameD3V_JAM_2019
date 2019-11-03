@@ -50,3 +50,4 @@ volume_db = -10.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Morrer = ExtResource( 4 )
+

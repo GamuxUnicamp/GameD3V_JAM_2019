@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Levels/Level2/Level2.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Tilemap/tileset1.tres" type="TileSet" id=2]
@@ -15,8 +15,7 @@
 [ext_resource path="res://Scenes/UI/UI.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Portao/Portao.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Placeholders/artefato.png" type="Texture" id=15]
-[ext_resource path="res://Scenes/Bolha/Bolha.tscn" type="PackedScene" id=16]
-[ext_resource path="res://OGG/Ambiente2.ogg" type="AudioStream" id=17]
+[ext_resource path="res://OGG/Ambiente2.ogg" type="AudioStream" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 192, 10 )
@@ -35,6 +34,7 @@ __meta__ = {
 }
 
 [node name="Actors" type="Node2D" parent="."]
+editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2124,6 +2124,7 @@ tem_coracao = false
 position = Vector2( 5920, 1376 )
 
 [node name="Art" type="Node2D" parent="."]
+editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2245,12 +2246,9 @@ self_modulate = Color( 0.124329, 0.130951, 0.164063, 1 )
 position = Vector2( 80, -24 )
 texture = ExtResource( 15 )
 
-[node name="Bolha" parent="." instance=ExtResource( 16 )]
-visible = false
-position = Vector2( 4956.02, -633.416 )
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 17 )
+stream = ExtResource( 16 )
 volume_db = -6.0
 autoplay = true
+
 [connection signal="body_entered" from="Level_Border" to="." method="change_level"]
