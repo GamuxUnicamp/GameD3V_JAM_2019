@@ -55,13 +55,13 @@ func new_line(line):
 func _unhandled_input(event):
 	#Write all digits quickly	
 	if Input.is_action_just_pressed("ui_fast_text") && !current_line_ended:
-		print("end the line")
+		#print("end the line")
 		current_line_ended = true
 		digitos.visible_characters = digitos.get_total_character_count()
 		emit_signal("Line_End")
 		#Skip Line
 	elif Input.is_action_just_pressed("ui_fast_text") && current_line_ended:
-		print("change the line")
+		#print("change the line")
 		current_line_ended = false
 		$Intervalo.stop()
 		$Intervalo.emit_signal("timeout")
