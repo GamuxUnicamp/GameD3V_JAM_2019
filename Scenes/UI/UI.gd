@@ -5,7 +5,7 @@ func _ready():
 
 func _process(delta):
 	
-	$Life/LifeBar.margin_right= (global.max_health * 100)
+	$Life/LifeBar.margin_right= (min(global.max_health,15) * 100)
 	
 	$Life/LifeBar.max_value = global.max_health
 	$Life/LifeBar.value = global.health

@@ -1,7 +1,7 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
-[ext_resource path="res://Fonts/elect/elect___.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/AC/AC_Brodie.otf" type="DynamicFontData" id=1]
 
 [resource]
-size = 42
+size = 30
 font_data = ExtResource( 1 )

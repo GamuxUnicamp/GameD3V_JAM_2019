@@ -23,6 +23,7 @@ func damage(val):
 	$Sprite.hide()
 	$RegrowTimer.start()
 	add_to_group("Ignore")
+	$AnimationPlayer.play("Voltar")
 
 func jogador_entrou(body):
 	if body.is_in_group("Player") and not is_in_group("Ignore"):

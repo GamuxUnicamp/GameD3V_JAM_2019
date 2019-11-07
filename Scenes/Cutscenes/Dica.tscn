@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Fonts/elect/elect.tres" type="DynamicFont" id=1]
+
+[node name="Dica" type="Label"]
+margin_left = 27.74
+margin_top = 672.285
+margin_right = 438.74
+margin_bottom = 769.285
+custom_fonts/font = ExtResource( 1 )
+text = "Avançar .  Q
+Pular cena . ESC ou Enter"

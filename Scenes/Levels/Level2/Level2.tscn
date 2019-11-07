@@ -10,7 +10,7 @@
 [ext_resource path="res://Scenes/Object/Objeto2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Artifact/Artefato.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Object/Superheart/Superheart.tscn" type="PackedScene" id=10]
-[ext_resource path="res://batata.jpg" type="Texture" id=11]
+[ext_resource path="res://Scenes/Levels/Background.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Animations/Fade1.tres" type="Animation" id=12]
 [ext_resource path="res://Scenes/UI/UI.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Portao/Portao.tscn" type="PackedScene" id=14]
@@ -34,12 +34,12 @@ __meta__ = {
 }
 
 [node name="Actors" type="Node2D" parent="."]
-editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Coral" type="Node2D" parent="Actors"]
+editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2162,29 +2162,14 @@ position = Vector2( 4256, 1640 )
 [node name="Superheart2" parent="Art" instance=ExtResource( 10 )]
 position = Vector2( 1808, -240 )
 
+[node name="Background" parent="." instance=ExtResource( 11 )]
+
 [node name="Level_Border" type="Area2D" parent="."]
 editor/display_folded = true
 position = Vector2( 4928, 3640 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Border"]
 shape = SubResource( 1 )
-
-[node name="Background" type="ParallaxBackground" parent="."]
-editor/display_folded = true
-
-[node name="Image" type="Sprite" parent="Background"]
-modulate = Color( 0.117647, 0.105882, 0.290196, 0.662745 )
-scale = Vector2( 2.88, 2.1 )
-texture = ExtResource( 11 )
-centered = false
-
-[node name="Image2" type="Sprite" parent="Background"]
-modulate = Color( 0, 0, 0, 0.670588 )
-self_modulate = Color( 100, 100, 100, 1 )
-show_behind_parent = true
-scale = Vector2( 2.88, 2.1 )
-texture = ExtResource( 11 )
-centered = false
 
 [node name="FX" type="AnimationPlayer" parent="."]
 editor/display_folded = true
@@ -2250,5 +2235,4 @@ texture = ExtResource( 15 )
 stream = ExtResource( 16 )
 volume_db = -6.0
 autoplay = true
-
 [connection signal="body_entered" from="Level_Border" to="." method="change_level"]

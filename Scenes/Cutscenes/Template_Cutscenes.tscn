@@ -39,5 +39,4 @@ scale = Vector2( 2.88, 2.12 )
 texture = ExtResource( 2 )
 centered = false
 flip_v = true
-
 [connection signal="timeout" from="Digito" to="." method="add_digit"]

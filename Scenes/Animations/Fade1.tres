@@ -14,15 +14,3 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 0, 0, 0, 1 ), Color( 0.690196, 0.843137, 1, 1 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Background/Image:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ), Color( 0.117647, 0.105882, 0.290196, 0.662745 ) ]
-}

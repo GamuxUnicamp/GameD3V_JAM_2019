@@ -8,8 +8,8 @@ func game_over(coisa1,coisa2):
 
 
 func _ready():
+	global.can_shoot = true
 	global.save_game("res://Scenes/Levels/Level2/Level2.tscn")
-	
 	$Actors/Player.connect("morri",self,"game_over",[$FX,$Actors/Player])
 	
 	#Controle de jogador 

@@ -4,8 +4,9 @@ var max_health = 5
 var health = max_health
 var artifacts = 0
 var mission_artifacts = 0
-var can_shoot = false
+var mission_health = 0
 var cena_atual = ""
+var can_shoot = false
 
 
 func add_artifact():
@@ -15,6 +16,8 @@ func add_artifact():
 func reset_health():
 	artifacts -= mission_artifacts
 	mission_artifacts = 0
+	max_health -= mission_health
+	mission_health = 0
 	health = max_health
 	
 func game_load():

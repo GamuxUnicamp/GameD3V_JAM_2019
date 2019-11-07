@@ -12,7 +12,7 @@
 [ext_resource path="res://Scenes/Artifact/Artefato.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Bolha/Bolha.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Object/Superheart/Superheart.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Placeholders/background.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Levels/Background.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Animations/Fade1.tres" type="Animation" id=14]
 [ext_resource path="res://Scenes/UI/UI.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Portao/Portao.tscn" type="PackedScene" id=16]
@@ -188,6 +188,7 @@ align = 1
 uppercase = true
 
 [node name="Actors" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 24, -2392 )
 __meta__ = {
 "_edit_lock_": true
@@ -769,6 +770,7 @@ position = Vector2( 8864, 2720 )
 position = Vector2( 8480, 3934.92 )
 
 [node name="Art" type="Node2D" parent="."]
+editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -790,19 +792,7 @@ scale = Vector2( 0.106666, 0.106666 )
 position = Vector2( 10448, 2720 )
 scale = Vector2( 0.106666, 0.106666 )
 
-[node name="Background" type="ParallaxBackground" parent="."]
-editor/display_folded = true
-layer = -3
-
-[node name="Image" type="Sprite" parent="Background"]
-modulate = Color( 1, 1, 1, 0.776471 )
-texture = ExtResource( 13 )
-centered = false
-
-[node name="Teste" type="Sprite" parent="Background"]
-modulate = Color( 1, 1, 1, 0.635294 )
-texture = ExtResource( 13 )
-centered = false
+[node name="Background" parent="." instance=ExtResource( 13 )]
 
 [node name="FX" type="AnimationPlayer" parent="."]
 editor/display_folded = true
@@ -834,5 +824,4 @@ texture = ExtResource( 17 )
 stream = ExtResource( 18 )
 volume_db = -6.0
 autoplay = true
-
 [connection signal="body_entered" from="Level_Border" to="." method="change_level"]
