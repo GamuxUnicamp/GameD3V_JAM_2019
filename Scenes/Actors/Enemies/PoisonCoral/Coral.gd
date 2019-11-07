@@ -20,7 +20,6 @@ func voltei():
 		jogador_entrou(body)
 
 func damage(val):
-	$Sprite.hide()
 	$RegrowTimer.start()
 	add_to_group("Ignore")
 	$AnimationPlayer.play("Voltar")

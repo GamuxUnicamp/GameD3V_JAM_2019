@@ -16,10 +16,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 3.4, 4.9, 5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( -0.1, 0.2, 3.4, 4.9, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.380392 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.380392 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath("Sprite")
@@ -28,9 +28,12 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 3.5 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0.2, 3.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "values": [ {
+"args": [  ],
+"method": "hide"
+}, {
 "args": [  ],
 "method": "show"
 } ]
@@ -43,6 +46,7 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.914286 )
 position = Vector2( 1.62108, -1.08072 )
 texture = ExtResource( 2 )
 
