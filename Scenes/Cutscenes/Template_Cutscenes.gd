@@ -4,7 +4,7 @@ signal Line_End
 export var next_scene = ""
 export(Array) var blabla
 onready var digitos = $Control/Dialogo
-var current_line_ended = false
+
 
 func _ready():
 	
@@ -53,16 +53,13 @@ func new_line(line):
 		digitos.add_color_override("font_color_shadow", Color( 0.69, 0.19, 0.38, 1 ))
 
 func _unhandled_input(event):
-	#Write all digits quickly	
-	if Input.is_action_just_pressed("ui_fast_text") && !current_line_ended:
-		print("end the line")
-		current_line_ended = true
+	#Write all digits quickly
+	if Input.is_action_just_pressed("ui_fast_text"):
 		digitos.visible_characters = digitos.get_total_character_count()
 		emit_signal("Line_End")
-		#Skip Line
-	elif Input.is_action_just_pressed("ui_fast_text") && current_line_ended:
-		print("change the line")
-		current_line_ended = false
+		
+	#Skip Line
+	if Input.is_action_pressed("action1") or Input.is_action_pressed("action2"):
 		$Intervalo.stop()
 		$Intervalo.emit_signal("timeout")
 	
