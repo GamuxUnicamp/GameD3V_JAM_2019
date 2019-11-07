@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Cutscenes/Template_Cutscenes.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/AC/AC.tres" type="DynamicFont" id=2]
 [ext_resource path="res://batata.jpg" type="Texture" id=3]
 [ext_resource path="res://OGG/Tema xilofone.ogg" type="AudioStream" id=4]
-[ext_resource path="res://Fonts/elect/elect.tres" type="DynamicFont" id=5]
 
 [node name="Intervalo" type="Control"]
 script = ExtResource( 1 )
@@ -52,12 +51,5 @@ stream = ExtResource( 4 )
 volume_db = -5.0
 pitch_scale = 0.5
 autoplay = true
-
-[node name="Dica" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
-custom_fonts/font = ExtResource( 5 )
-text = "Avançar falas: Q
-Pular cena: ESC ou Enter"
 
 [connection signal="timeout" from="Digito" to="." method="add_digit"]
